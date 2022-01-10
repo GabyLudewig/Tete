@@ -7,13 +7,7 @@ body {
 }
 
 nav {
-  background-color: white;
-}
-
-.fotologo {
-  right: 80%;
-  width: 8%;
-  border-radius: 100%;
+  background-color: #FFF;
 }
 
 .navbar-blue {
@@ -24,12 +18,6 @@ nav {
   font-weight: bold;
   font-size: 20px;
   font-family: "Fredoka One", cursive;
-}
-
-.contenedor_iconos {
-  position: relative;
-  left: 600px;
-  justify-content: space-around;
 }
 
 .green {
@@ -46,22 +34,6 @@ nav {
   margin-top: 10px;
   margin-left: 10px;
   text-align: center;
-}
-
-.contenedor_historia {
-  height: 300px;
-  display: flex;
-  /*flex-flow:<flex-direction><flex-wrap>;*/
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: center;
-  gap: 10px;
-}
-
-.historia {
-  width: 160px;
-  height: 90%;
 }
 
 .card-title {
@@ -87,16 +59,14 @@ nav {
   margin-right: 10px;
 }
 
-.rosa {
-  background: pink;
+.blue-back {
+  background: #0472e3;
+  background: linear-gradient(90deg, #0472e3 0%, #022080 100%);
 }
 
-.color_usuario {
-  background: #3789b9;
-}
-
-.color_amigos {
-  background: #a827e4;
+.orange-back {
+  background: #e44f27;
+  background: linear-gradient(90deg, #e44f27 0%, #f06628 100%);
 }
 
 .yellow-back {
@@ -109,21 +79,8 @@ nav {
   color: #ACB5BE;
 }
 
-.add {
-  background-color: #0055FF;
-  height: 30px;
-  border-radius: 10%;
-}
-
-.eliminar {
-  background: #f29b4b;
-  background: linear-gradient(90deg, #f29b4b 0%, #f4c64e 100%);
-  height: 30px;
-  border-radius: 10%;
-}
-
 .list-group-item {
   border: none;
 }
 
-/*# sourceMappingURL=amigos.css.map */
+/*# sourceMappingURL=login.css.map */
