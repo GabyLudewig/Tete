@@ -4,7 +4,7 @@ import{global}from './global/global'
 //import {Counter} from './components/Counter/Counter';
 import {Nav} from './components/Nav/Nav';
 import{Inicio}from './components/Inicio/Inicio'
-import{Quotes}from './components/Quotes//Quotes'
+import{Quotes}from './components/Quotes/Quotes'
 //import{Buspub}from './components/Inicio/Buspub';
 ReactDOM.render(
   <>
