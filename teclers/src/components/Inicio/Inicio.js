@@ -116,7 +116,7 @@ function Inicio(props) {
                             <div className="card-body">
                               <p className="card-text">Juan Manuel Hernandez Gutierrez</p>     
                             </div>
-                            <Quotes/>
+                            
                         </div>
                     </div>
                 </div>
