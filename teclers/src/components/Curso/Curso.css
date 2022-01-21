@@ -69,7 +69,7 @@ nav {
   gap: 10px;
 }
 .perfil {
-    height: auto;
+    height: 250px;
     width: 97%;
     display: flex;
     /*flex-flow:<flex-direction><flex-wrap>;*/
@@ -165,14 +165,3 @@ nav {
   }
 
 /*# sourceMappingURL=inicio.css.map */
-
-/*css ale*/
-
-
-.card{
-    margin-top: 10px;
-    margin-right: 10px;
-}
-.quote-text{
-    text-align: left;
-}

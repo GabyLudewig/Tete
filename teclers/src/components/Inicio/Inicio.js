@@ -1,10 +1,10 @@
-import './Quotes.css';
+import './Inicio.css';
 import { useState } from 'react';
 
 
-function Quotes({quotesDB}) {
+function Inicio({quotesDB}) {
 
-const [quotes,setQuotes] = useState(quotesDB)
+const [quotes,setInicio] = useState(quotesDB)
 
 const [loading,setLoading] = useState(false)
 
@@ -20,7 +20,7 @@ const onSubmit = (event) => {
 
     setLoading(true)
     setTimeout(()=> {
-        setQuotes([...quotes,newQuote])
+        setInicio([...quotes,newQuote])
         event.target.reset()
         setLoading(false)
     },1000)
@@ -239,4 +239,4 @@ const onSubmit = (event) => {
   );
 }
 
-export {Quotes};
+export {Inicio};
