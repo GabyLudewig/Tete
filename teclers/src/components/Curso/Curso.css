@@ -6,37 +6,11 @@ body {
   background-color: #F4F5F7;
 }
 /*narvar*/
-nav {
-  background-color: white;
-}
-
-.fotologo {
-  right: 70%;
-  width: 8%;
-  border-radius: 100%;
-}
-
-.navbar-blue {
-  color: #0055FF;
-}
-
-.navbar-brand {
-  font-weight: bold;
-  font-size: 20px;
-  font-family: "Fredoka One", cursive;
-}
 
 
 
-.green {
-  color: #10D875;
-}
 
-.gray {
-  color: #878787;
-  font-weight: lighter;
-  text-decoration: none;
-}
+
 /*tarjetas*/
 .card {
   margin-top: 10px;
@@ -58,16 +32,7 @@ nav {
   }
 /*(hitorias y perfil)*/  
 
-.contenedor_historia {
-  height: 300px;
-  display: flex;
-  /*flex-flow:<flex-direction><flex-wrap>;*/
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: center;
-  gap: 10px;
-}
+
 .perfil {
     height: 250px;
     width: 97%;
@@ -80,39 +45,8 @@ nav {
     gap: 10px;
   }
 
-  .sub{
-      height: auto;
-  }
+  
 
-.historia {
-  width: 150px;
-  height: 90%;
-}
-/*buscador publicaciones*/
-.TodoSearch{
-    background: #F9FBFC;
-    border-radius: 40px;
-    border: 2px solid #202329;
-    margin: 0 24px ;
-    height: 64px;
-    width: calc(100% - 62px);
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-    color: #1E1E1F;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41,0.25);
-}
-
-.TodoSearch::placeholder{
-    color: #A5A5A5;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-}
-
-.TodoSearch:focus{
-    outline-color: #61DAFA;
-}
 
 /*icononos y lista*/
 .circle-icons {

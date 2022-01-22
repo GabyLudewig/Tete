@@ -23,7 +23,7 @@ const onSubmit = (event) => {
         setInicio([...quotes,newQuote])
         event.target.reset()
         setLoading(false)
-    },1000)
+    },3000)
 
     
 }
