@@ -15,7 +15,7 @@ ReactDOM.render(
   <Nav />
     <Routes>
       
-      < Route path="/inicio"element={ <Home quotesDB={global.quotesDB} />} />
+      < Route path="/"element={ <Home quotesDB={global.quotesDB} />} />
       < Route path="/curso"element={ <Curso />} />
       
     </Routes>
