@@ -60,9 +60,12 @@ function Curso() {
                   </div>
                </div>
             </div>
+
+            
+            
             <div className="col-lg-7" >
                
-                  <div className="card  ">
+                  <div className="card gray  ">
                      <div className="card-body">
                      <input class="form-control" type="text" placeholder="Nuevo Curso" aria-label="Disabled input example" disabled/>
                         <br/>

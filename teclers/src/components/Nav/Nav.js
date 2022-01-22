@@ -17,6 +17,9 @@ function Nav() {
          <li className="nav-item">
            <NavLink className="nav-link" to="/curso"><i class="fas fa-graduation-cap"></i></  NavLink>
          </li>
+         <li className="nav-item">
+           <NavLink className="nav-link" to="/ayuda"><i class="fas fa-question-circle"></i></  NavLink>
+         </li>
          <li className="nav-item dropdown">
            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Dropdown

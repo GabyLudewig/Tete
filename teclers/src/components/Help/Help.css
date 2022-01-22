@@ -11,9 +11,10 @@ body {
 
 
 /*tarjetas*/
-.card {
+.card{
   margin-top: 10px;
   margin-left: 10px;
+  
   text-align: center;
 }
 
@@ -24,7 +25,7 @@ body {
   
   .card-img-top {
     border-radius: 50%;
-    width: 70px;
+    width: auto;
     height: 70px;
     margin: 0px auto;
     margin-top: 20px;
@@ -70,6 +71,3 @@ body {
 .list-group-item {
   border: none;
 }
-
-
-/*# sourceMappingURL=inicio.css.map */
