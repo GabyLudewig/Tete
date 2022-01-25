@@ -21,10 +21,10 @@ function Nav() {
            <NavLink className="nav-link" to="/ayuda"><i className="fas fa-question-circle"></i></  NavLink>
          </li>
          <li className="nav-item dropdown">
-           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Dropdown
+           <a className="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <i className="fas fa-bell"><span class="position-absolute top start-70 translate-middle badge border border-light rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span></i>
            </a>
-           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+           <ul className="dropdown-menu  p-4 text-muted" aria-labelledby="navbarDropdown">
              <li><a className="dropdown-item" href="#">Action</a></li>
              <li><a className="dropdown-item" href="#">Another action</a></li>
              
