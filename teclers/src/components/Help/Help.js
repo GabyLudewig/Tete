@@ -64,7 +64,7 @@ function Help() {
                   <li className="list-group-item">
                      <div className="d-flex justify-content-start flex-wrap align-items-center">
                         <div className="circle-icons white-back">
-                        <i class="fas fa-cog"></i>                             
+                        <i className="fas fa-cog"></i>                             
                         </div>
                         <a className="gray">Ajustes</a>
                      </div>
@@ -72,7 +72,7 @@ function Help() {
                   <li className="list-group-item">
                      <div className="d-flex justify-content-start flex-wrap align-items-center">
                         <div className="circle-icons white-back">
-                        <i class="fas fa-comments"></i>
+                        <i className="fas fa-comments"></i>
                         </div>
                         <a className="gray">Chat</a>
                      </div>
@@ -84,7 +84,7 @@ function Help() {
       <div className="col-lg-7" >
          <div className="card curso  ">
             <div className="card-body">
-               <input class="form-control " type="text" placeholder="¿Necesitas ayuda?"  aria-label="Disabled input example" disabled/>
+               <input className="form-control " type="text" placeholder="¿Necesitas ayuda?"  aria-label="Disabled input example" disabled/>
                <br/>
                <form onSubmit>
 
@@ -102,7 +102,7 @@ function Help() {
                      <label >Problemas Comunes</label>
                   </div>
                   <br/>
-                  <button type="button" class="btn btn-primary">Enviar Comentario</button>
+                  <button type="button" className="btn btn-primary">Enviar Comentario</button>
                </form>
             </div>
          </div>

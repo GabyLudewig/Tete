@@ -184,29 +184,29 @@ const onSubmit = (event) => {
                <div className="card gray" >
                   <div className="card-body">
                      
-                  <ul class="list-group">
-                        <li class="list-group-item">
-                           <div class="d-flex justify-content-start flex-wrap align-items-center">
-                              <div class="circle-icons color_amigos">
-                                 <i class="fas fa-user-secret"></i>                             
+                  <ul className="list-group">
+                        <li className="list-group-item">
+                           <div className="d-flex justify-content-start flex-wrap align-items-center">
+                              <div className="circle-icons color_amigos">
+                                 <i className="fas fa-user-secret"></i>                             
                               </div>
-                              <a class="gray">Gaby Ludewig</a>
+                              <a className="gray">Gaby Ludewig</a>
                            </div>
                         </li>
-                        <li class="list-group-item">
-                           <div class="d-flex justify-content-start flex-wrap align-items-center">
-                              <div class="circle-icons color_amigos">
-                                 <i class="fas fa-user-ninja"></i>
+                        <li className="list-group-item">
+                           <div className="d-flex justify-content-start flex-wrap align-items-center">
+                              <div className="circle-icons color_amigos">
+                                 <i className="fas fa-user-ninja"></i>
                               </div>
-                              <a class="gray">Tonny</a>
+                              <a className="gray">Tonny</a>
                            </div>
                         </li>
-                        <li class="list-group-item">
-                           <div class="d-flex justify-content-start flex-wrap align-items-center">
-                              <div class="circle-icons color_amigos">
-                                 <i class="fas fa-user-astronaut"></i>
+                        <li className="list-group-item">
+                           <div className="d-flex justify-content-start flex-wrap align-items-center">
+                              <div className="circle-icons color_amigos">
+                                 <i className="fas fa-user-astronaut"></i>
                               </div>
-                              <a class="gray">Isac Vega</a>
+                              <a className="gray">Isac Vega</a>
                            </div>
                         </li>
                      </ul>
@@ -216,13 +216,13 @@ const onSubmit = (event) => {
                
                <div className="card gray" >
                   <div className="card-body">
-                  <h5 class="card-title">sugerencias de amistad</h5>
-                     <li class="list-group-item">
-                        <div class="d-flex justify-content-start flex-wrap align-items-center">
-                           <div class="circle-icons color_amigos">
-                              <i class="fas fa-user-astronaut"></i>
+                  <h5 className="card-title">sugerencias de amistad</h5>
+                     <li className="list-group-item">
+                        <div className="d-flex justify-content-start flex-wrap align-items-center">
+                           <div className="circle-icons color_amigos">
+                              <i className="fas fa-user-astronaut"></i>
                            </div>
-                           <a class="gray">Lucaz Roa</a>
+                           <a className="gray">Lucaz Roa</a>
                         </div>
                      </li>
                      <button className="btn btn-primary btn-block">Agregar</button>
