@@ -102,7 +102,7 @@ function Help() {
                      <label >Problemas Comunes</label>
                   </div>
                   <br/>
-                  <button type="button" className="btn btn-primary">Enviar Comentario</button>
+                  <button type="button" className="btn btn-secondary">Enviar Comentario</button>
                </form>
             </div>
          </div>

@@ -5,6 +5,11 @@ body {
   font-family: "Fredoka One", cursive;
   background-color: #F4F5F7;
 }
+.form-control{
+  background-color: rgba(255,255,255,0.13);
+  backdrop-filter: blur(0px);
+  border: 2px solid rgba(255,255,255,0.1);
+}
 
 
 
@@ -45,9 +50,7 @@ body {
   margin-right: 10px;
 }
 
-.rosa {
-  background: pink;
-}
+
 
 .color_usuario {
   background: #3789b9;
@@ -57,15 +60,6 @@ body {
   background: #a827e4;
 }
 
-.yellow-back {
-  background: #f29b4b;
-  background: linear-gradient(90deg, #f29b4b 0%, #f4c64e 100%);
-}
-
-.white-back {
-  background: white;
-  color: #ACB5BE;
-}
 
 .list-group-item {
   border: none;

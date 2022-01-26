@@ -65,9 +65,9 @@ function Curso() {
             
             <div className="col-lg-7" >
                
-                  <div className="card gray  ">
+                  <div className="card gray ">
                      <div className="card-body">
-                     <input className="form-control" type="text" placeholder="Nuevo Curso" aria-label="Disabled input example" disabled/>
+                     <input className="form-control " type="text" placeholder="Nuevo Curso" aria-label="Disabled input example" disabled/>
                         <br/>
                         <form onSubmit>
                            <div className="form-floating mb-3">
@@ -85,7 +85,7 @@ function Curso() {
                            <label >Cursos Realizados</label>
                            </div>
                            <br/>
-                           <button type="button" className="btn btn-primary">Enviar</button>
+                           <button type="button" className="btn btn-secondary">Enviar</button>
                         </form>
                      </div>
                   </div>

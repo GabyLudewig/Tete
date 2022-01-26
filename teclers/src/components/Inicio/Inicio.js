@@ -44,7 +44,7 @@ const onSubmit = (event) => {
                               <div className="circle-icons color_usuario">
                                  <i className="fas fa-user-circle"></i>                            
                               </div>
-                              <a className="gray">Juan Manuel Hrenandez Gutierrez</a>
+                              <a className="gray">Juan Manuel Hernandez</a>
                            </div>
                         </li>
                         <li className="list-group-item">
@@ -61,6 +61,8 @@ const onSubmit = (event) => {
                                  <i className="far fa-bookmark"></i>
                               </div>
                               <a className="gray">Guardado</a>
+                              
+                              
                            </div>
                         </li>
                         
@@ -135,7 +137,7 @@ const onSubmit = (event) => {
                             </div>
                             { !loading && (
                                 <div className="d-grid gap-2">
-                                     <button className="btn btn-primary btn-block">publicar</button>
+                                     <button className="btn btn-secondary btn-block">publicar</button>
                                  </div>
                             )}
                         </form>
@@ -224,9 +226,10 @@ const onSubmit = (event) => {
                            </div>
                            <a className="gray">Lucaz Roa</a>
                         </div>
+                        <button className="btn btn-secondary btn-block">Agregar</button>
+                        <button className="btn btn-dark btn-block">Eliminar</button> 
                      </li>
-                     <button className="btn btn-primary btn-block">Agregar</button>
-                     <button className="btn btn-danger btn-block">Eliminar</button>
+                     
                                  
 
                   </div>
