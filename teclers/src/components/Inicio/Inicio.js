@@ -143,10 +143,11 @@ const onSubmit = (event) => {
                         </form>
 
                         { loading && (
-                           <div className="text-center">
-                            <div className="spinner-grow text-primary" role="status">
-                              <span className="visually-hidden">Loading...</span>
-                            </div>
+                           <div className="d-grid gap-2">
+                            <button class="btn btn-secondary" type="button" disabled>
+                              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                               Publicando ...
+                            </button>
                           </div>
                         )}
 
