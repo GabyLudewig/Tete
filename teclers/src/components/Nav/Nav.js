@@ -10,7 +10,12 @@ function Nav() {
        <span className="navbar-toggler-icon"></span>
      </button>
      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+       <form className="d-flex">
+         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+         <button className="btn btn-outline-success" type="submit">Search</button>
+       </form>
+       <ul className="navbar-nav position-absolute start-50">
+         
          <li className="nav-item">
            <NavLink className="nav-link "  to="/"><i className="fas fa-house-user"></i></ NavLink>
          </li>
@@ -18,9 +23,13 @@ function Nav() {
            <NavLink className="nav-link" to="/curso"><i className="fas fa-graduation-cap"></i></  NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link" to="/ayuda"><i className="fas fa-question-circle"></i></  NavLink>
+           <NavLink className="nav-link" to="/ayuda" ><i className="fas fa-question-circle"></i>
+           </  NavLink>
          </li>
-         <li className="nav-item dropdown">
+         
+       </ul>
+       <ul className="navbar-nav position-relative start-50">
+       <li className="nav-item dropdown">
            <a className="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            <i className="fas fa-bell"><span class="position-absolute top start-70 translate-middle badge border border-light rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span></i>
            </a>
@@ -31,12 +40,9 @@ function Nav() {
              <li><a className="dropdown-item" href="#">Something else here</a></li>
            </ul>
          </li>
-         
        </ul>
-       <form className="d-flex">
-         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-         <button className="btn btn-outline-success" type="submit">Search</button>
-       </form>
+
+       
      </div>
    </div>
  </nav>
