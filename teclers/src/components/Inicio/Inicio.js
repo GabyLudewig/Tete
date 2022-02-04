@@ -28,7 +28,6 @@ const onSubmit = (event) => {
     
 }
 
-
   return (
     <div>
     
@@ -144,8 +143,8 @@ const onSubmit = (event) => {
 
                         { loading && (
                            <div className="d-grid gap-2">
-                            <button class="btn btn-secondary" type="button" disabled>
-                              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <button className="btn btn-secondary" type="button" disabled>
+                              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                Publicando ...
                             </button>
                           </div>
