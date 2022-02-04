@@ -1,7 +1,18 @@
 import './Nav.css';
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+
 
 function Nav() {
+
+  const [token, saveToken] = useLocalStorage("TOKEN", {});
+  const navigate = useNavigate();
+
+  const logout = () => {
+    navigate("/login");
+    saveToken({});
+  };
   return (
    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
    <div className="container-fluid">
@@ -28,6 +39,23 @@ function Nav() {
          </li>
          
        </ul>
+       <ul className="navbar-nav">
+            {!token.token && (
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/login">
+                  Login <i className="fas fa-sign-in-alt"></i>
+                </NavLink>
+              </li>
+            )}
+            {token.token && (
+              <li className="nav-item">
+                <span className="nav-link" onClick={logout}>
+                  {" "}
+                  Log Out <i className="fas fa-sign-out-alt"></i>{" "}
+                </span>
+              </li>
+            )}
+          </ul>
        <ul className="navbar-nav position-relative start-50">
        <li className="nav-item dropdown">
            <a className="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
