@@ -13,10 +13,12 @@ import{global}from './global/global'
 import { Curso } from './components/Curso/Curso'
 import { Help } from './components/Help/Help';
 import { Home } from './pages/Home'
+import { Registro } from './pages/Registro'
 
 
 
 ReactDOM.render(
+  <GlobalProvider>
   <BrowserRouter>
     <Nav />
     <Routes>
@@ -25,10 +27,12 @@ ReactDOM.render(
       < Route path="/curso" element={<Curso />} />
       < Route path="/ayuda" element={<Help />} />
       < Route path="/login" element={<Login />} />
+      < Route path="/registro" element={<Registro />} />
       < Route path="*" element={<NotFound />} />
 
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </GlobalProvider>,
   document.getElementById('root')
 );
 

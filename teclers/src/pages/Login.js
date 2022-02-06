@@ -12,6 +12,7 @@ function Login() {
   const [user, saveUser] = useLocalStorage("USER", {});
   const [token, saveToken] = useLocalStorage("TOKEN", {});
 
+    
   const login = async (event) => {
     event.preventDefault();
     let newLogin = {
@@ -47,10 +48,11 @@ function Login() {
     <div className="container">
       <br />
       <div className="row">
-        <div className="col-lg-6 offset-lg-3">
-          <div className="card">
+
+      <div className="col-lg-6 ">
+          <div className="card" >
             <div className="card-body">
-              <h5 className="card-title">Bienvenide:</h5>
+              <h5 className="card-title">Hola Tecler:</h5>
               {error.error && (
                 <div className="alert alert-danger text-center" role="alert">
                   <strong>{error.errorMessage}</strong>
@@ -87,6 +89,11 @@ function Login() {
                     </button>
                   </div>
                 )}
+                <br />
+                <div className="d-grid gap-2">
+                    <a className="navbar-brand" href="/registro">Registrate</a>
+                  
+                  </div>
               </form>
 
               {loading && (
@@ -105,3 +112,5 @@ function Login() {
 }
 
 export { Login };
+
+

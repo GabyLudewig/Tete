@@ -8,3 +8,11 @@ module.exports.loginUser = async (userData) => {
   }
   return { error: "Usuaria(o) o contraseña incorrectos" };
 };
+
+module.exports.registroUser = async (userData) => {
+  let response = await userModel.registro(userData);
+  if (response.login) {
+    return { token: await jwt.sign(response.data, "MaIsGa") };
+  }
+  return { error: "Usuaria(o) o contraseña incorrectos" };
+};

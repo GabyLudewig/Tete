@@ -12,6 +12,7 @@ function Nav() {
   const logout = () => {
     navigate("/login");
     saveToken({});
+    
   };
   return (
    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
@@ -39,8 +40,21 @@ function Nav() {
          </li>
          
        </ul>
-       <ul className="navbar-nav">
-            {!token.token && (
+     
+       <ul className="navbar-nav position-relative start-50">
+       <li className="nav-item dropdown">
+           <a className="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <i className="fas fa-bell"><span className="position-absolute top start-70 translate-middle badge border border-light rounded-circle bg-danger p-1"><span className="visually-hidden">unread messages</span></span></i>
+           </a>
+           <ul className="dropdown-menu  p-4 text-muted" aria-labelledby="navbarDropdown">
+             <li><a className="dropdown-item" href="#">Action</a></li>
+             <li><a className="dropdown-item" href="#">Another action</a></li>
+             
+             <li><a className="dropdown-item" href="#">Something else here</a></li>
+           </ul>
+         </li>
+         <ul className="navbar-nav">
+         {!token.token && (
               <li className="nav-item">
                 <NavLink className="nav-link" to="/login">
                   Login <i className="fas fa-sign-in-alt"></i>
@@ -56,18 +70,6 @@ function Nav() {
               </li>
             )}
           </ul>
-       <ul className="navbar-nav position-relative start-50">
-       <li className="nav-item dropdown">
-           <a className="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           <i className="fas fa-bell"><span className="position-absolute top start-70 translate-middle badge border border-light rounded-circle bg-danger p-1"><span className="visually-hidden">unread messages</span></span></i>
-           </a>
-           <ul className="dropdown-menu  p-4 text-muted" aria-labelledby="navbarDropdown">
-             <li><a className="dropdown-item" href="#">Action</a></li>
-             <li><a className="dropdown-item" href="#">Another action</a></li>
-             
-             <li><a className="dropdown-item" href="#">Something else here</a></li>
-           </ul>
-         </li>
        </ul>
 
        

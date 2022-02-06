@@ -38,4 +38,18 @@ const apiLogin = async (userData) => {
     .catch((err) => console.log(err));
 };
 
-export { apiLogin };
+const apiRegistro = async (userData) => {
+  return await fetch("http://localhost:3001/registro", {
+    method: "POST",
+    body: JSON.stringify(userData),
+    headers: {
+      "Content-Type": "application/json",
+      
+    },
+  })
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
+};
+
+
+export { apiLogin, apiRegistro };

@@ -29,9 +29,9 @@ const onSubmit = (event) => {
 }
 
   return (
-    <div>
     
-    <div className='container-fluid'>
+    
+    <div className='container'>
         <div className='row '>
             <div className='col-sm-3'>
                <div className="card gray" >
@@ -238,7 +238,7 @@ const onSubmit = (event) => {
 
         </div>
       </div>
-   </div>
+   
   );
 }
 

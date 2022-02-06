@@ -5,4 +5,10 @@ module.exports = (app) => {
     let result = await userController.loginUser(req.body);
     res.send(result);
   });
+
+  app.post("/registro", async (req, res) => {
+    let result = await userController.registroUser(req.body);
+    res.send(result);
+  });
+  
 };
