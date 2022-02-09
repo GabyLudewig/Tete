@@ -8,7 +8,7 @@ function Registro() {
   const {setSesion} = useContext(GlobalContext);
   const navigate = useNavigate();
   const [loadingR, setLoadingR] = useState(false);
-  const [errorR, setErrorR] = useState({ errorR: false, errorRMessage: "ErrorR" });
+  const [error, setError] = useState({ error: false, errorMessage: "Error" });
   const [user, saveUser] = useLocalStorage("USER", {});
   const [token, saveToken] = useLocalStorage("TOKEN", {});
 
@@ -23,23 +23,30 @@ function Registro() {
     setLoadingR(true);
   
     let registroResult = await apiRegistro(newRegistro);
+    console.log(registroResult)
     if(registroResult){
       setLoadingR(false);
   
-      if(registroResult.errorR){
-        setErrorR({
-          errorRMessage: registroResult.errorR,
-          errorR: true,
+      if(registroResult.error){
+        setError({
+          errorMessage: registroResult.error,
+          error: true,
         });
       }
       if (registroResult.token) {
-        setErrorR({ ...errorR, errorR: false });
+        setError({ ...error, error: false });
         saveToken({ token: registroResult.token });
         let data = registroResult.token.split(".");
         let userData = window.atob(data[1]);
         saveUser(userData)
         setSesion(userData)
         navigate("/");
+      }
+      if (registroResult.details) {
+        setError({
+          errorMessage: "Password fuera de parametros",
+          error: true,
+        });
       }
       }
     }
@@ -53,9 +60,9 @@ function Registro() {
               <div className="card" >
                 <div className="card-body">
                   <h1 className="card-title">Nuevo Tecler?</h1>
-                  {errorR.errorR && (
+                  {error.error && (
                     <div className="alert alert-danger text-center" role="alert">
-                      <strong>{errorR.errorRMessage}</strong>
+                      <strong>{error.errorMessage}</strong>
                     </div>
                   )}
                   <form onSubmit={registro}>

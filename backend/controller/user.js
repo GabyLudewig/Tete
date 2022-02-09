@@ -14,5 +14,5 @@ module.exports.registroUser = async (userData) => {
   if (response.login) {
     return { token: await jwt.sign(response.data, "MaIsGa") };
   }
-  return { error: "Usuaria(o) o contraseña incorrectos" };
+  return { error: "Usuaria(o) ya registrado" };
 };

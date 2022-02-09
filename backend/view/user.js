@@ -1,4 +1,5 @@
 const userController = require("../controller/user");
+const midd = require('../midd/midd.usuarios')
 
 module.exports = (app) => {
   app.post("/login", async (req, res) => {
@@ -6,7 +7,7 @@ module.exports = (app) => {
     res.send(result);
   });
 
-  app.post("/registro", async (req, res) => {
+  app.post("/registro",midd.validarDatosDeUsuario, async (req, res) => {
     let result = await userController.registroUser(req.body);
     res.send(result);
   });
