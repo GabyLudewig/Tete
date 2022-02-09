@@ -17,7 +17,8 @@ function Nav() {
   return (
    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
    <div className="container-fluid">
-     <a className="navbar-brand" href="/">TeTe</a>
+   <img className= "logoTete" src={require("../img/tete.jpg")} />
+     <a className="navbar-brand" href="/" > TeTe</a>
      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span className="navbar-toggler-icon"></span>
      </button>
@@ -54,21 +55,13 @@ function Nav() {
            </ul>
          </li>
          <ul className="navbar-nav">
-         {!token.token && (
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/login">
-                  Login <i className="fas fa-sign-in-alt"></i>
-                </NavLink>
-              </li>
-            )}
-            {token.token && (
               <li className="nav-item">
                 <span className="nav-link" onClick={logout}>
                   {" "}
                   Log Out <i className="fas fa-sign-out-alt"></i>{" "}
                 </span>
               </li>
-            )}
+            
           </ul>
        </ul>
 

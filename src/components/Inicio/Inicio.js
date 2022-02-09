@@ -2,11 +2,16 @@ import './Inicio.css';
 import { useState } from 'react';
 
 
+
 function Inicio({quotesDB}) {
 
 const [quotes,setInicio] = useState(quotesDB)
 
 const [loading,setLoading] = useState(false)
+
+const user = JSON.parse(localStorage.getItem("USER"))
+const foto= user.foto_perfil
+console.log (foto)
 
 
 const onSubmit = (event) => {
@@ -40,10 +45,10 @@ const onSubmit = (event) => {
                      <ul className="list-group">
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons color_usuario">
-                                 <i className="fas fa-user-circle"></i>                            
+                              <div>
+                              <img className= "logoTecler" src={require(foto)} />                           
                               </div>
-                              <a className="gray">Juan Manuel Hernandez</a>
+                              <a className="gray" href='/perfil'>{user.nombres} {user.apellidos}</a>
                            </div>
                         </li>
                         <li className="list-group-item">
@@ -99,7 +104,7 @@ const onSubmit = (event) => {
             
             <div className="col-lg-6" >
               
-              <div className="d-flex justify-content-start flex-wrap">
+              {/* <div className="d-flex justify-content-start flex-wrap">
                  <div className="card contenedor_historia ">
                     <div className="card historia " >
                        <img src="..." className="card-img-top" alt="..."/>
@@ -114,7 +119,7 @@ const onSubmit = (event) => {
                        <img src="..." className="card-img-top" alt="..."/>
                      </div>
                  </div>
-              </div>
+              </div> */}
               
               <div className="d-flex justify-content-start flex-wrap">
                     <div className="card perfil sub " >
@@ -132,7 +137,7 @@ const onSubmit = (event) => {
 
                             <div className="mb-3">
                                 {/*<label className="form-label">Quote:</label>*/}
-                                <textarea className="form-control"  rows="4" placeholder="Que estas pensando: Juan Manuel" required></textarea>
+                                <textarea className="form-control"  rows="4" placeholder= "Que estas pensando:" required></textarea>
                             </div>
                             { !loading && (
                                 <div className="d-grid gap-2">
