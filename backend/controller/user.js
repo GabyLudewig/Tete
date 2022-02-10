@@ -16,3 +16,11 @@ module.exports.registroUser = async (userData) => {
   }
   return { error: "Usuaria(o) ya registrado" };
 };
+
+module.exports.buscarUsuario = async (usuario) => {
+  return await userModel.buscarUsuario(usuario)
+}
+
+module.exports.buscarPerfilUsuario = async (tecler) => {
+  return await userModel.buscarPerfilUsuario(tecler)
+}

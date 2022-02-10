@@ -23,7 +23,6 @@ function Registro() {
     setLoadingR(true);
   
     let registroResult = await apiRegistro(newRegistro);
-    console.log(registroResult)
     if(registroResult){
       setLoadingR(false);
   

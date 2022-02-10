@@ -6,6 +6,7 @@ const app = express();
 
 //Views
 const user = require("./view/user");
+const quote = require("./view/quotes");
 
 //Midlewares
 app.use(express.json());
@@ -26,3 +27,4 @@ async function serverStart (){
 serverStart ();
 
 user(app);
+quote(app);

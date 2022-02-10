@@ -43,3 +43,25 @@ try{
   throw new Error(error)
 }
 };
+
+module.exports.buscarUsuario = async (tecler) => {
+  try{
+    const words = tecler.tecler.split (" ")
+  let res = []
+  for(let i = 0; i<words.length; i++ ){
+      let word = await sql.query(`SELECT * FROM users WHERE nombres LIKE '%${words[i]}%' OR apellidos LIKE '%${words[i]}%'`)
+      res.push(word)
+    }
+    return {res,words,tecler }
+  }catch (error) {
+    console.log("Error en modelo")
+    throw new Error(error)
+  }
+  };
+
+  module.exports.buscarPerfilUsuario = async (id) => {
+    let res = await sql.query(
+      `SELECT * FROM users WHERE id = '${id.id}' `)
+    return { res }
+  }
+  

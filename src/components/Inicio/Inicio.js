@@ -46,7 +46,7 @@ const onSubmit = (event) => {
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div>
-                              <img className= "logoTecler" src={require(foto)} />                           
+                              <img className= "logoTecler" src={require("../img/tete.jpg")} />                           
                               </div>
                               <a className="gray" href='/perfil'>{user.nombres} {user.apellidos}</a>
                            </div>

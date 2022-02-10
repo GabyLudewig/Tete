@@ -12,4 +12,15 @@ module.exports = (app) => {
     res.send(result);
   });
   
+  app.post("/buscarUsuario", async (req, res) => {
+    const usuario = req.body
+    const result = await userController.buscarUsuario(usuario)
+    res.send( result )
+  })
+
+app.post("/buscarPerfilUsuario", async (req, res) => {
+  const id = req.body
+  const busca = await userController.buscarPerfilUsuario(id)
+  res.send({ busca })
+})
 };
