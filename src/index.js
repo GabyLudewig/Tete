@@ -6,7 +6,7 @@ import { Nav } from "./components/Nav/Nav";
 import { GlobalProvider } from "./context/GlobalContext";
 
 import { NotFound } from "./pages/404";
-import{global}from './global/global'
+import {global} from './global/global'
 
 // Importamos el provider y la store de React
 import { Provider } from "react-redux";
@@ -16,6 +16,7 @@ import { Curso } from './components/Curso/Curso'
 import { Help } from './components/Help/Help';
 import { Home } from './pages/Home'
 import { Registro } from './pages/Registro'
+import { Apertura } from './components/apertura/apertura';
 
 
 
@@ -23,10 +24,10 @@ ReactDOM.render(
   <Provider store = {store}>
     <GlobalProvider>
       <BrowserRouter>
-        <Nav />
         <Routes>
 
-          < Route path="/" element={<Home quotesDB={global.quotesDB} />} />
+          < Route path="/" element={<Apertura />} />  
+          < Route path="/home" element={<Home quotesDB={global.quotesDB} />} />
           < Route path="/curso" element={<Curso />} />
           < Route path="/ayuda" element={<Help />} />
           < Route path="/login" element={<Login />} />

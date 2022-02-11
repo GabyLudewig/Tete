@@ -39,7 +39,7 @@ function Login() {
         let userData = window.atob(data[1]);
         saveUser(userData)
         setSesion(userData)
-        navigate("/");
+        navigate("/home");
       }
     }
   };
