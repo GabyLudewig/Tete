@@ -49,7 +49,7 @@ const onSubmit = (event) => {
                                  <div>
                                  <img className= "logoTecler" src={require("../img/tete.jpg")} />                           
                                  </div>
-                                 <a className="gray" href='/perfil'>{user.nombres} {user.apellidos}</a>
+                                 <a className="gray" href='/portada'>{user.nombres} {user.apellidos}</a>
                               </div>
                            </li>
                            <li className="list-group-item">
