@@ -1,8 +1,11 @@
 import { createStore, combineReducers } from "redux";
 import {inicioReducer}from "../reducers/inicio"
+import { portadaReducer } from "../reducers/portada";
 
 const reducers = combineReducers({
-    inicioReducer
+    inicioReducer,
+    portadaReducer
+
 
 });
 
