@@ -1,10 +1,10 @@
 import './Curso.css';
-
+import {Nav}from "../Nav/Nav"
 
 function Curso() {
    return (   
       <>
-      
+       <Nav />
          <div>
             <div className='container-fluid'>
                <div className='row '>

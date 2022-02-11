@@ -25,7 +25,7 @@ ReactDOM.render(
     <GlobalProvider>
       
       <BrowserRouter>
-       <Nav />
+      
         <Routes>
 
           < Route path="/" element={<Apertura />} />  
