@@ -17,8 +17,8 @@ function Nav() {
   return (
    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
    <div className="container-fluid">
-   <img className= "logoTete" src={require("../img/tete.jpg")} />
-     <a className="navbar-brand" href="/" > TeTe</a>
+   
+     <a className="navbar-brand" href="/home" ><img className= "logoTete" src={require("../img/tete.jpg")} /></a>
      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span className="navbar-toggler-icon"></span>
      </button>
@@ -30,7 +30,7 @@ function Nav() {
        <ul className="navbar-nav position-absolute start-50">
          
          <li className="nav-item">
-           <NavLink className="nav-link "  to="/"><i className="fas fa-house-user"></i></ NavLink>
+           <NavLink className="nav-link "  to="/home"><i className="fas fa-house-user"></i></ NavLink>
          </li>
          <li className="nav-item">
            <NavLink className="nav-link" to="/curso"><i className="fas fa-graduation-cap"></i></  NavLink>
@@ -38,6 +38,9 @@ function Nav() {
          <li className="nav-item">
            <NavLink className="nav-link" to="/ayuda" ><i className="fas fa-question-circle"></i>
            </  NavLink>
+         </li>
+         <li className="nav-item">
+           <NavLink className="nav-link "  to="/portada"><i className="fas fa-house-user"></i></ NavLink>
          </li>
          
        </ul>

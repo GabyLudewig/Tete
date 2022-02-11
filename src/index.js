@@ -17,7 +17,7 @@ import { Help } from './components/Help/Help';
 import { Home } from './pages/Home'
 import { Registro } from './pages/Registro'
 import { Apertura } from './components/apertura/apertura';
-
+import { Frontpage } from './pages/Frontpage';
 
 
 ReactDOM.render(
@@ -30,6 +30,7 @@ ReactDOM.render(
           < Route path="/home" element={<Home quotesDB={global.quotesDB} />} />
           < Route path="/curso" element={<Curso />} />
           < Route path="/ayuda" element={<Help />} />
+          < Route path="/portada" element={<Frontpage />} />
           < Route path="/login" element={<Login />} />
           < Route path="/registro" element={<Registro />} />
           < Route path="*" element={<NotFound />} />
