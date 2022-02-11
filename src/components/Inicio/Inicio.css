@@ -56,12 +56,16 @@ body {
     background-color: rgba(255,255,255,0.13);
     backdrop-filter: blur(10px);
   }
+  .portada{
+    height: 250px;
+    width: 100%;
+  }
 
   
 /*(hitorias y perfil)*/  
 
 .contenedor_historia {
-  height: 300px;
+  height: 400px;
   display: flex;
   /*flex-flow:<flex-direction><flex-wrap>;*/
   flex-flow: row wrap;
