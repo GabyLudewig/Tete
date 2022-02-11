@@ -59,7 +59,7 @@ const onSubmit = (event) => {
                                  <div className="circle-icons color_amigos">
                                     <i className="fas fa-user-friends"></i>
                                  </div>
-                                 <a className="gray">Amigos</a>
+                                 <a className="gray" href='/amigos'>Amigos</a>
                               </div>
                            </li>
                            <li className="list-group-item">
