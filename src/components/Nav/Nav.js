@@ -42,6 +42,9 @@ function Nav() {
          <li className="nav-item">
            <NavLink className="nav-link "  to="/portada"><i className="fas fa-house-user"></i></ NavLink>
          </li>
+         <li className="nav-item">
+           <NavLink className="nav-link "  to="/amigos"><i className="fas fa-house-user"></i></ NavLink>
+         </li>
          
        </ul>
      
