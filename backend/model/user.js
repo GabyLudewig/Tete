@@ -65,3 +65,20 @@ module.exports.buscarUsuario = async (tecler) => {
     return { res }
   }
   
+  module.exports.perfil = async (id) => {
+    let resCur = await sql.query(
+         `SELECT * FROM cursos WHERE id_user_curso = '${id.id}'` )
+      let resRec = await sql.query(
+        `SELECT * FROM recomendacion WHERE id_user_recomendado = '${id.id}'` )
+        let resPer = await sql.query(
+          `SELECT * FROM users WHERE id = '${id.id}'` )
+          let resIdi = await sql.query(
+            `SELECT * FROM idiomas WHERE id_user_idioma = '${id.id}'` )
+            let resHobb = await sql.query(
+              `SELECT * FROM hobbies WHERE id_user_hobbies = '${id.id}'` )
+              let resExtras = await sql.query(
+                `SELECT * FROM extras WHERE id_user_extras = '${id.id}'` )
+
+      return {resCur,resRec, resPer, resIdi, resHobb, resExtras}
+      
+  }

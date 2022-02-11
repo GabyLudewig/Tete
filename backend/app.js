@@ -7,6 +7,7 @@ const app = express();
 //Views
 const user = require("./view/user");
 const quote = require("./view/quotes");
+const amigos = require("./view/amigos");
 
 //Midlewares
 app.use(express.json());
@@ -28,3 +29,4 @@ serverStart ();
 
 user(app);
 quote(app);
+amigos(app);
