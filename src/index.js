@@ -23,7 +23,9 @@ import { Frontpage } from './pages/Frontpage';
 ReactDOM.render(
   <Provider store = {store}>
     <GlobalProvider>
+      
       <BrowserRouter>
+       <Nav />
         <Routes>
 
           < Route path="/" element={<Apertura />} />  

@@ -1,6 +1,6 @@
 import './Inicio.css';
 import { useState } from 'react';
-import { Nav } from '../../components/Nav/Nav'
+
 
 
 
@@ -36,7 +36,7 @@ const onSubmit = (event) => {
 
   return (
    <>
-      <Nav/>
+      
       <div className='container'>
          <div className='row '>
                <div className='col-sm-3'>

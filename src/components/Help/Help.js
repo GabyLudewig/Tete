@@ -1,10 +1,10 @@
 import './Help.css';
-import { Nav } from '../../components/Nav/Nav'
+
 
 function Help() {
     return ( 
       <>
-         <Nav/>
+         
          <div className='container-fluid'>
             <div className='row '>
                <div className='col-sm-4'>
