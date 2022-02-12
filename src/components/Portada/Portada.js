@@ -22,6 +22,8 @@ function Portada({ quotes, save, loading }) {
     save(newQuote);
   };
 
+  const user = JSON.parse(localStorage.getItem("USER"))
+
   return (
    <>
      <Nav />
@@ -39,7 +41,7 @@ function Portada({ quotes, save, loading }) {
                               <div className="circle-icons white-back">
                                  <i className="fas fa-user-secret"></i>                             
                               </div>
-                              <a className="gray">usuario</a>
+                              <a className="gray">{user.nombres} {user.apellidos}</a>
                            </div>
                         </li>
                         
@@ -58,7 +60,7 @@ function Portada({ quotes, save, loading }) {
                               <div className="circle-icons white-back">
                                  <i className="fas fa-user-secret"></i>                             
                               </div>
-                              <a className="gray">Ciudad y pais de residencia</a>
+                              <a className="gray">Ciudad y pais de residencia: {user.ciudad} {user.pais}</a>
                            </div>
                         </li>
                         <li className="list-group-item">
@@ -66,7 +68,7 @@ function Portada({ quotes, save, loading }) {
                               <div className="circle-icons white-back">
                                  <i className="fas fa-user-ninja"></i>
                               </div>
-                              <a className="gray">Edad</a>
+                              <a className="gray">Fecha de Nacimiento: {user.fecha_nac}</a>
                            </div>
                         </li>
                         <li className="list-group-item">
@@ -74,7 +76,7 @@ function Portada({ quotes, save, loading }) {
                               <div className="circle-icons white-back">
                                  <i className="fas fa-user-astronaut"></i>
                               </div>
-                              <a className="gray">Estudios </a>
+                              <a className="gray">Estudios: </a>
                            </div>
                         </li>
                         <li className="list-group-item">
@@ -90,7 +92,7 @@ function Portada({ quotes, save, loading }) {
                               <div className="circle-icons white-back">
                                  <i className="fas fa-user-astronaut"></i>
                               </div>
-                              <a className="gray">Perfil de linkedin </a>
+                              <a className="gray">Perfil de linkedin: {user.linkedIn} </a>
                            </div>
                         </li>
                         <li className="list-group-item">
@@ -120,12 +122,18 @@ function Portada({ quotes, save, loading }) {
 
                         
                         <div className="form-floating">
-                        <textarea className="form-control"></textarea>
-                        <label >Deja tu fedback aqui:</label>
+                        <textarea 
+                        className="form-control"
+                           id="floatingInput"
+                           defaultValue={user.recomendacion}
+                           autoFocus
+                           required
+                        />
+                        <label htmlFor="floatingInput">Deja tu comentario aqui</label>
                         </div>
                         <br/>
                      
-                        <button type="button" className="btn btn-secondary">Enviar Comentario</button>
+                        <button type="submit" className="btn btn-secondary">Enviar Comentario</button>
                      </form>
                   </div>
                </div>
