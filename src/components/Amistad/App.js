@@ -7,20 +7,16 @@ import {
   Table,
   Button,
   Container,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  FormGroup,
-  ModalFooter,
+  
 } from "reactstrap";
 
 const data = [
-  { id: 1, Persona: "",  },
-  { id: 2, Persona: "Goku",  },
-  { id: 3, Persona: "Kenshin Himura",  },
-  { id: 4, Persona: "Monkey D. Luffy", },
-  { id: 5, Persona: "Edward Elric"},
-  { id: 6, Persona: "Seto Kaiba" },
+  { id: 1, Persona: "Lupita Juarez",  },
+  { id: 2, Persona: "aldo Castillo",  },
+  { id: 3, Persona: "Damian Rodriguez",  },
+  { id: 4, Persona: "Gaby Ludewig", },
+  { id: 5, Persona: "Isaac Vega "},
+  { id: 6, Persona: "Jorge Hernandez" },
 ];
 
 class App extends React.Component {
@@ -99,8 +95,8 @@ class App extends React.Component {
   <Container>
      
      <br />
-     <Table>
-        <thead>
+     <Table primary>
+        <thead >
            <tr>
               <th>ID</th>
               <th>Persona</th>
@@ -116,12 +112,12 @@ class App extends React.Component {
               
               <td>
                  <Button
-                    color="primary"
+                    color="secondary"
                     onClick={() => this.mostrarModalActualizar(dato)}
                  >
                  Agregar
                  </Button>{" "}
-                 <Button color="danger" onClick={()=> this.eliminar(dato)}>Eliminar</Button>
+                 <Button color="dark" onClick={()=> this.eliminar(dato)}>Eliminar</Button>
               </td>
            </tr>
            ))}
