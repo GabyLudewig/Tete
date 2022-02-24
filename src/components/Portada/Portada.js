@@ -31,16 +31,15 @@ function Portada({ quotes, save, loading }) {
          <div className='row '>
             <div className="col-lg-12" >
                <div className="card contenedor_historia ">
-               <div class="card  portada mb-3">
-                  <img src="..." class="card-img-top" alt="..."/>   
+               <div class="card  portada ">
+
+                  <img className= "picazzo" src={require("../img/picassoo.jpg")} /> 
                </div>
                <div className="card-body">
                      <ul className="list-group">
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
-                              </div>
+                              <img className= "logoTecler" src={require("../img/PabloPicasso.jpg")} />
                               <a className="gray">{user.nombres} {user.apellidos}</a>
                            </div>
                         </li>

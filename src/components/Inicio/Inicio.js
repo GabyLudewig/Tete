@@ -49,7 +49,7 @@ const onSubmit = (event) => {
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div>
-                                 <img className= "logoTecler" src={require("../img/tete.jpg")} />                           
+                                 <img className= "logoTecler" src={require("../img/PabloPicasso.jpg")} />                           
                                  </div>
                                  <a className="gray" href='/portada'>{user.nombres} {user.apellidos}</a>
                               </div>
@@ -107,22 +107,7 @@ const onSubmit = (event) => {
                
                <div className="col-lg-6" >
                
-               {/* <div className="d-flex justify-content-start flex-wrap">
-                  <div className="card contenedor_historia ">
-                     <div className="card historia " >
-                        <img src="..." className="card-img-top" alt="..."/>
-                        </div>
-                        <div className="card historia" >
-                        <img src="..." className="card-img-top" alt="..."/>
-                        </div>
-                        <div className="card historia" >
-                        <img src="..." className="card-img-top" alt="..."/>
-                        </div>
-                        <div className="card historia" >
-                        <img src="..." className="card-img-top" alt="..."/>
-                        </div>
-                  </div>
-               </div> */}
+            
                
                <div className="d-flex justify-content-start flex-wrap">
                      <div className="card perfil sub " >
@@ -137,7 +122,7 @@ const onSubmit = (event) => {
                                  <label className="form-label">Author:</label>
                                  <input type="text" className="form-control" placeholder="author name" required/>
                               </div>*/}
-
+                              <div id="output"></div>
                               <div className="mb-3">
                                  {/*<label className="form-label">Quote:</label>*/}
                                  <textarea className="form-control"  rows="4" placeholder= "Que estas pensando:" required></textarea>
@@ -234,7 +219,7 @@ const onSubmit = (event) => {
                               </div>
                               <a className="gray">Lucaz Roa</a>
                            </div>
-                           <button className="btn btn-secondary btn-block">Agregar</button>
+                           <button className="btn btn-secondary btn-block">Agregar</button>{"  "}
                            <button className="btn btn-dark btn-block">Eliminar</button> 
                         </li>
                         

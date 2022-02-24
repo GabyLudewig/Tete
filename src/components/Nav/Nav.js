@@ -40,10 +40,13 @@ function Nav() {
            </  NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link "  to="/portada"><i className="fas fa-house-user"></i></ NavLink>
+           <NavLink className="nav-link "  to="/portada"><i class="fas fa-laptop-house"></i></ NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link "  to="/amigos"><i className="fas fa-house-user"></i></ NavLink>
+           <NavLink className="nav-link "  to="/amigos"><i class="fas fa-user-friends"></i></ NavLink>
+         </li>
+         <li className="nav-item">
+           <NavLink className="nav-link "  to="/amistad"><i class="fa-solid fa-user-plus"></i></ NavLink>
          </li>
          
        </ul>

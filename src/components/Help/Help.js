@@ -1,5 +1,6 @@
 import './Help.css';
 import {Nav}from "../Nav/Nav"
+const user = JSON.parse(localStorage.getItem("USER"))
 
 
 function Help() {
@@ -14,10 +15,8 @@ function Help() {
                         <ul className="list-group">
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
-                                 <div className="circle-icons color_usuario">
-                                    <i className="fas fa-user-circle"></i>                            
-                                 </div>
-                                 <a className="gray">Juan Manuel Hrenandez Gutierrez</a>
+                                 <img className= "logoTecler" src={require("../img/PabloPicasso.jpg")} />
+                                 <a className="gray">{user.nombres} {user.apellidos}</a>
                               </div>
                            </li>
                            <li className="list-group-item">

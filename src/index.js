@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
+import App from './components/Amistad/App';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login } from "./pages/Login";
 //import { Nav } from "./components/Nav/Nav";
@@ -37,6 +40,8 @@ ReactDOM.render(
           < Route path="/amigos" element={<Amigos />} />
           < Route path="/login" element={<Login />} />
           < Route path="/registro" element={<Registro />} />
+          < Route path="/amistad" element={<App />} />
+
           < Route path="*" element={<NotFound />} />
 
         </Routes>
@@ -45,6 +50,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
 
 
 

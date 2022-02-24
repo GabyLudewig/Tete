@@ -1,5 +1,7 @@
 import './Curso.css';
 import {Nav}from "../Nav/Nav"
+const user = JSON.parse(localStorage.getItem("USER"))
+
 
 function Curso() {
    return (   
@@ -14,10 +16,8 @@ function Curso() {
                            <ul className="list-group">
                               <li className="list-group-item">
                                  <div className="d-flex justify-content-start flex-wrap align-items-center">
-                                    <div className="circle-icons color_usuario">
-                                       <i className="fas fa-user-circle"></i>                            
-                                    </div>
-                                    <a className="gray">Juan Manuel Hrenandez Gutierrez</a>
+                                  <img className= "logoTecler" src={require("../img/PabloPicasso.jpg")} />
+                                    <a className="gray">{user.nombres} {user.apellidos}</a>
                                  </div>
                               </li>
                               <li className="list-group-item">
@@ -74,11 +74,11 @@ function Curso() {
                               <br/>
                               <form onSubmit>
                                  <div className="form-floating mb-3">
-                                    <input  className="form-control " />
+                                    <input  className="form-control " tabIndex={1} />
                                     <label>Nombre del Curso</label>
                                  </div>
                                  <div className="form-floating">
-                                    <input  className="form-control" type="date" id="fecha_nac" />
+                                    <input  className="form-control" type="date" id="fecha_nac" tabIndex={3} />
                                     <label >Fecha de Realizacion</label>
                                  </div>
                                  <br/>
