@@ -14,6 +14,26 @@ function Nav() {
     saveToken({});
     
   };
+
+  const findFriend = async (event) => {
+    event.preventDefault()
+    console.log(event.target[0].value)
+    try {
+      const friendData = await fetch("http://localhost:3001/buscarUsuario", {
+        method: "POST",
+        body: JSON.stringify({ tecler: event.target[0].value}),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      const parsedAmigo = await friendData.json()
+      console.log(parsedAmigo)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
+
   return (
    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
    <div className="container-fluid">
@@ -23,7 +43,7 @@ function Nav() {
        <span className="navbar-toggler-icon"></span>
      </button>
      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-       <form className="d-flex">
+       <form className="d-flex" onSubmit={findFriend}>
          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
          <button className="btn btn-outline-success" type="submit">Search</button>
        </form>
