@@ -21,7 +21,9 @@ try{
     if (!validaRegistro[0][0]) {
     
   let reg = await sql.query(
-    `INSERT INTO users (nombres, apellidos, email, password) VALUES ('${userData.nombre}', '${userData.apellido}', '${userData.email}', MD5('${userData.password}'))`
+    `INSERT INTO users (nombres, apellidos, email, ciudad, pais, estudios, idiomas, conocimientos_extra, linkedin, hobbies, fecha_nac, password) VALUES ('${userData.nombre}', '${userData.apellido}', '${userData.email}', '${userData.ciudad}', '${userData.pais}', '${userData.estudios}', '${userData.idiomas}', 
+    '${userData.conocimientos_extra}', '${userData.linkedin}', '${userData.hobbies}', '${userData.fecha_nac}',
+    MD5('${userData.password}'))`
   );
 
   let response = await sql.query(

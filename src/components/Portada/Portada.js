@@ -57,7 +57,7 @@ function Portada({ quotes, save, loading }) {
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
+                                <i class="fas fa-globe-americas"></i>                            
                               </div>
                               <a className="gray">Ciudad y pais de residencia: {user.ciudad} {user.pais}</a>
                            </div>
@@ -65,7 +65,7 @@ function Portada({ quotes, save, loading }) {
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons white-back">
-                                 <i className="fas fa-user-ninja"></i>
+                                <i class="fas fa-calendar-alt"></i>
                               </div>
                               <a className="gray">Fecha de Nacimiento: {user.fecha_nac}</a>
                            </div>
@@ -73,23 +73,23 @@ function Portada({ quotes, save, loading }) {
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
+                              <i class="fas fa-user-graduate"></i>
                               </div>
-                              <a className="gray">Estudios: </a>
+                              <a className="gray">Estudios: {user.estudios}</a>
                            </div>
                         </li>
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
+                              <i class="fas fa-language"></i>
                               </div>
-                              <a className="gray">Idiomas</a>
+                              <a className="gray">Idiomas: {user.idiomas}</a>
                            </div>
                         </li>
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
+                                <i class="fas fa-address-card"></i>
                               </div>
                               <a className="gray">Perfil de linkedin: {user.linkedIn} </a>
                            </div>
@@ -97,17 +97,17 @@ function Portada({ quotes, save, loading }) {
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
+                                <i class="far fa-futbol"></i>
                               </div>
-                              <a className="gray">Hobbies </a>
+                              <a className="gray">Hobbies: {user.hobbies} </a>
                            </div>
                         </li>
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
+                                <i class="fas fa-lightbulb"></i>
                               </div>
-                              <a className="gray">Conocimientos extras </a>
+                              <a className="gray">Conocimientos extras: {user.conocimientos_extra} </a>
                            </div>
                         </li>
                      </ul>
