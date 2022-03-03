@@ -7,3 +7,7 @@ module.exports.saveQuote = async (quote) => {
 module.exports.listQuotes = async () => {
   return await quotesModel.listQuote();
 };
+
+module.exports.add = (a, b) => {
+  return a + b;
+};
