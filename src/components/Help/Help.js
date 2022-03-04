@@ -92,9 +92,9 @@ function Help() {
                         <br/>
                         <form onSubmit>
 
-                           <div className="form-floating mb-3">
+                           <div className="form-floating  mb-3">
                               <input  className="form-control " />
-                              <label>Titulo</label>
+                              <label >Titulo</label>
                            </div>
                            <div className="form-floating">
                            <textarea className="form-control"></textarea>

@@ -95,7 +95,7 @@ class App extends React.Component {
   <Container>
      
      <br />
-     <Table primary>
+     <Table dark>
         <thead >
            <tr>
               <th>ID</th>
@@ -117,7 +117,7 @@ class App extends React.Component {
                  >
                  Agregar
                  </Button>{" "}
-                 <Button color="dark" onClick={()=> this.eliminar(dato)}>Eliminar</Button>
+                 <Button color="light" onClick={()=> this.eliminar(dato)}>Eliminar</Button>
               </td>
            </tr>
            ))}

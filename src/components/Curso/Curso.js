@@ -75,17 +75,17 @@ function Curso() {
                               <form onSubmit>
                                  <div className="form-floating mb-3">
                                     <input  className="form-control " tabIndex={1} />
-                                    <label>Nombre del Curso</label>
+                                    <label className="label_black">Nombre del Curso</label>
                                  </div>
                                  <div className="form-floating">
                                     <input  className="form-control" type="date" id="fecha_nac" tabIndex={3} />
-                                    <label >Fecha de Realizacion</label>
+                                    <label className="label_black" >Fecha de Realizacion</label>
                                  </div>
                                  <br/>
                                  <div className="form-floating">
                                     
                                  <input className='form-control' type="number" />
-                                 <label >Cursos Realizados</label>
+                                 <label className="label_black">Cursos Realizados</label>
                                  </div>
                                  <br/>
                                  <button type="button" className="btn btn-secondary">Enviar</button>

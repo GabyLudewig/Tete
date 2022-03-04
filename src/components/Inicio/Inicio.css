@@ -4,8 +4,8 @@
 
 body {
   font-family: "fedoka",cursive;
-  background-color: #F4F5F7; 
-  background-image: url(../img/sol.jpg);
+  background-color: black; 
+  background-image: url(../img/lunaa.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -26,10 +26,20 @@ body {
 }
 
 .gray {
-  color:white;
+  color:whitesmoke;
   font-weight: lighter;
   text-decoration: none;
 }
+
+.label_black {
+  color:rgba(15, 3, 3, 0.952);
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+
+
+
 /*tarjetas*/
 .card {
   
@@ -54,7 +64,7 @@ body {
     margin: 0px auto;
     margin-top: 20px; 
     background-color: rgba(255,255,255,0.13);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
   }
   .portada{
     height: 250px;
