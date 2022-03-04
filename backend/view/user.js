@@ -18,15 +18,11 @@ module.exports = (app) => {
     res.send( result )
   })
 
-app.post("/buscarPerfilUsuario", async (req, res) => {
-  const id = req.body
-  const busca = await userController.buscarPerfilUsuario(id)
-  res.send( busca )
-})
 
 app.post("/perfil", async (req, res) => {
-  const id = req.body
-  const busca = await userController.perfil(id)
+  let busca = await userController.perfil(req.body)
   res.send( busca )
 })
 };
+
+

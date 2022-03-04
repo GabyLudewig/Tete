@@ -19,6 +19,7 @@ import { Curso } from './components/Curso/Curso'
 import { Help } from './components/Help/Help';
 import { Amigos } from './components/Amigos/Amigos';
 import { PerfilAmigo } from './components/PerfilAmigo/perfilAmigo';
+import  Perfil from './components/Perfil/Perfil';
 import { Home } from './pages/Home'
 import { Registro } from './pages/Registro'
 import { Apertura } from './components/apertura/apertura';
@@ -38,6 +39,7 @@ ReactDOM.render(
           < Route path="/perfilAmigo/:name/:apellido" element={<PerfilAmigo />} />
           < Route path="/curso" element={<Curso />} />
           < Route path="/ayuda" element={<Help />} />
+          < Route path="/portada/:id" element={<Perfil />} />
           < Route path="/portada" element={<Frontpage />} />
           < Route path="/amigos" element={<Amigos />} />
           < Route path="/login" element={<Login />} />

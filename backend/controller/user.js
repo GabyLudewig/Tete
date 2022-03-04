@@ -21,10 +21,7 @@ module.exports.buscarUsuario = async (usuario) => {
   return await userModel.buscarUsuario(usuario)
 }
 
-module.exports.buscarPerfilUsuario = async (tecler) => {
-  return await userModel.buscarPerfilUsuario(tecler)
-}
-
 module.exports.perfil = async (tecler) => {
   return await userModel.perfil(tecler)
 }
+

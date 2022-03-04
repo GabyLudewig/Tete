@@ -1,9 +1,9 @@
 import './Amigos.css';
-import {Nav}from "../Nav/Nav"
+import { Nav } from "../Nav/Nav"
 import React from 'react';
 import { List } from 'reactstrap';
-import {apiList} from "../../api/api"
-
+import { apiList } from "../../api/api"
+import { NavLink, Link } from "react-router-dom";
 
 
 function Amigos() {
@@ -13,36 +13,30 @@ function Amigos() {
 
    const [lista, setLista] = React.useState([])
 
-React.useEffect(()=>{
-   console.log(user.id)
-   newList()
-   
-}, [])
+   React.useEffect(() => {
+      newList()
 
-   const newList = async () =>{
+   }, [])
+
+   const newList = async () => {
 
       const data = await apiList(user)
-       
-       console.log(data[0])
-       console.log(data[0][0])
-       let dataParse = {}
-       let final = []
+      let dataParse = {}
+      let final = []
 
-       for(let i = 0; i < data[0].length; i++){
-         dataParse =data[0][i][0][0]
-         console.log(data.length)
-         console.log (dataParse)
+      for (let i = 0; i < data[0].length; i++) {
+         dataParse = data[0][i][0][0]
          final.push(dataParse)
-       }
-       console.log(final)
-       setLista(final)
+      }
 
-       
+      setLista(final)
+
+
    }
 
-    return ( 
+   return (
       <>
-          <Nav />
+         <Nav />
          <div className='container-fluid'>
             <div className='row '>
                <div className='col-sm-4'>
@@ -51,7 +45,7 @@ React.useEffect(()=>{
                         <ul className="list-group">
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
-                                 <img className= "logoTecler" src={require("../img/PabloPicasso.jpg")} />
+                                 <img className="logoTecler" src={require("../img/PabloPicasso.jpg")} />
                                  <a className="gray">{user.nombres} {user.apellidos}</a>
                               </div>
                            </li>
@@ -81,7 +75,7 @@ React.useEffect(()=>{
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons white-back">
-                                    <i className="fas fa-gamepad"></i>                             
+                                    <i className="fas fa-gamepad"></i>
                                  </div>
                                  <a className="gray">Juegos</a>
                               </div>
@@ -104,7 +98,7 @@ React.useEffect(()=>{
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons white-back">
-                                 <i className="fas fa-cog"></i>                             
+                                    <i className="fas fa-cog"></i>
                                  </div>
                                  <a className="gray">Ajustes</a>
                               </div>
@@ -112,7 +106,7 @@ React.useEffect(()=>{
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons white-back">
-                                 <i className="fas fa-comments"></i>
+                                    <i className="fas fa-comments"></i>
                                  </div>
                                  <a className="gray">Chat</a>
                               </div>
@@ -123,21 +117,26 @@ React.useEffect(()=>{
                </div>
                <div className="col-lg-7" >
                   <div className="card gray" >
-                  <div className="card-body">
-                     <ul>
-                        {
-                           lista.map (item =>(
-                              <li key = {item.id}>{item.nombres} {item.apellidos}</li>
-                           ))
-                        }
-                     </ul>
+                     <div className="card-body">
+                        <ul>
+                           {
+                              lista.map(item => (
+                                 <li key={item.id}>
+                                    <Link to={`../Portada/${item.id}`}> {item.nombres} {item.apellidos}
+                                    </Link>
+
+                                 </li>
+
+                              ))
+                           }
+                        </ul>
+                     </div>
                   </div>
-               </div>
                </div>
             </div>
          </div>
       </>
-     );
+   );
 }
 
-export  {Amigos};
+export { Amigos };
