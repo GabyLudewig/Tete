@@ -1,12 +1,23 @@
 import './Help.css';
-import {Nav}from "../Nav/Nav"
-const user = JSON.parse(localStorage.getItem("USER"))
-
+import { Nav } from "../Nav/Nav"
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 function Help() {
-    return ( 
+
+   const [token] = useLocalStorage("TOKEN", {});
+   const navigate = useNavigate();
+   const user = JSON.parse(localStorage.getItem("USER"))
+
+   useEffect(() => {
+      if (!token.token) {
+         navigate("/login");
+      }
+   }, []);
+   return (
       <>
-          <Nav />
+         <Nav />
          <div className='container-fluid'>
             <div className='row '>
                <div className='col-sm-4'>
@@ -15,7 +26,7 @@ function Help() {
                         <ul className="list-group">
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
-                                 <img className= "logoTecler" src={require("../img/PabloPicasso.jpg")} />
+                                 <img className="logoTecler" src={require("../img/PabloPicasso.jpg")} />
                                  <a className="gray">{user.nombres} {user.apellidos}</a>
                               </div>
                            </li>
@@ -45,7 +56,7 @@ function Help() {
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons white-back">
-                                    <i className="fas fa-gamepad"></i>                             
+                                    <i className="fas fa-gamepad"></i>
                                  </div>
                                  <a className="gray">Juegos</a>
                               </div>
@@ -68,7 +79,7 @@ function Help() {
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons white-back">
-                                 <i className="fas fa-cog"></i>                             
+                                    <i className="fas fa-cog"></i>
                                  </div>
                                  <a className="gray">Ajustes</a>
                               </div>
@@ -76,7 +87,7 @@ function Help() {
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons white-back">
-                                 <i className="fas fa-comments"></i>
+                                    <i className="fas fa-comments"></i>
                                  </div>
                                  <a className="gray">Chat</a>
                               </div>
@@ -88,24 +99,24 @@ function Help() {
                <div className="col-lg-7" >
                   <div className="card curso  ">
                      <div className="card-body">
-                        <input className="form-control " type="text" placeholder="¿Necesitas ayuda?"  aria-label="Disabled input example" disabled/>
-                        <br/>
+                        <input className="form-control " type="text" placeholder="¿Necesitas ayuda?" aria-label="Disabled input example" disabled />
+                        <br />
                         <form onSubmit>
 
                            <div className="form-floating  mb-3">
-                              <input  className="form-control " />
+                              <input className="form-control " />
                               <label >Titulo</label>
                            </div>
                            <div className="form-floating">
-                           <textarea className="form-control"></textarea>
-                           <label >Comentarios</label>
+                              <textarea className="form-control"></textarea>
+                              <label >Comentarios</label>
                            </div>
-                           <br/>
+                           <br />
                            <div className="form-floating">
-                              <input className='form-control'  />
+                              <input className='form-control' />
                               <label >Problemas Comunes</label>
                            </div>
-                           <br/>
+                           <br />
                            <button type="button" className="btn btn-secondary">Enviar Comentario</button>
                         </form>
                      </div>
@@ -114,7 +125,7 @@ function Help() {
             </div>
          </div>
       </>
-     );
+   );
 }
 
-export  {Help};
+export { Help };

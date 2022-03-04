@@ -4,10 +4,21 @@ import React from 'react';
 import { List } from 'reactstrap';
 import { apiList } from "../../api/api"
 import { NavLink, Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 
 function Amigos() {
 
+   const [token] = useLocalStorage("TOKEN", {});
+   const navigate = useNavigate();
+
+   useEffect(() => {
+      if (!token.token) {
+         navigate("/login");
+      }
+   }, []);
 
    const user = JSON.parse(localStorage.getItem("USER"))
 
@@ -122,7 +133,7 @@ function Amigos() {
                            {
                               lista.map(item => (
                                  <li key={item.id}>
-                                    <Link to={`../Portada/${item.id}`}> {item.nombres} {item.apellidos}
+                                    <Link className="gray" to={`../Portada/${item.id}`}> {item.nombres} {item.apellidos}
                                     </Link>
 
                                  </li>
