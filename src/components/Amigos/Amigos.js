@@ -1,9 +1,45 @@
 import './Amigos.css';
 import {Nav}from "../Nav/Nav"
-const user = JSON.parse(localStorage.getItem("USER"))
+import React from 'react';
+import { List } from 'reactstrap';
+import {apiList} from "../../api/api"
+
 
 
 function Amigos() {
+
+
+   const user = JSON.parse(localStorage.getItem("USER"))
+
+   const [lista, setLista] = React.useState([])
+
+React.useEffect(()=>{
+   console.log(user.id)
+   newList()
+   
+}, [])
+
+   const newList = async () =>{
+
+      const data = await apiList(user)
+       
+       console.log(data[0])
+       console.log(data[0][0])
+       let dataParse = {}
+       let final = []
+
+       for(let i = 0; i < data[0].length; i++){
+         dataParse =data[0][i][0][0]
+         console.log(data.length)
+         console.log (dataParse)
+         final.push(dataParse)
+       }
+       console.log(final)
+       setLista(final)
+
+       
+   }
+
     return ( 
       <>
           <Nav />
@@ -86,106 +122,14 @@ function Amigos() {
                   </div>
                </div>
                <div className="col-lg-7" >
-                  
                   <div className="card gray" >
                   <div className="card-body">
-                     <ul className="list-group">
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
-                              </div>
-                              <a className="gray">Ciudad y pais de residencia</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
-                              </div>
-                              <a className="gray">Amigos</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
-                              </div>
-                              <a className="gray">Amigos</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
-                              </div>
-                              <a className="gray">Amigos</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
-                              </div>
-                              <a className="gray">Amigos</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-secret"></i>                             
-                              </div>
-                              <a className="gray">Amigos</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-ninja"></i>
-                              </div>
-                              <a className="gray">Edad</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
-                              </div>
-                              <a className="gray">Estudios </a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
-                              </div>
-                              <a className="gray">Idiomas</a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
-                              </div>
-                              <a className="gray">Perfil de linkedin </a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
-                              </div>
-                              <a className="gray">Hobbies </a>
-                           </div>
-                        </li>
-                        <li className="list-group-item">
-                           <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons white-back">
-                                 <i className="fas fa-user-astronaut"></i>
-                              </div>
-                              <a className="gray">Conocimientos extras </a>
-                           </div>
-                        </li>
+                     <ul>
+                        {
+                           lista.map (item =>(
+                              <li key = {item.id}>{item.nombres} {item.apellidos}</li>
+                           ))
+                        }
                      </ul>
                   </div>
                </div>
