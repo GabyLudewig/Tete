@@ -25,13 +25,13 @@ const apiRegistro = async (userData) => {
     .catch((err) => console.log(err));
 };
 
-const apiList = async (userData) => {
+const apiList = async (userData, token) => {
   return await fetch("http://localhost:3001/listAmigos", {
     method: "POST",
     body: JSON.stringify(userData),
     headers: {
       "Content-Type": "application/json",
-      
+      Authorization: token,
     },
   })
     .then((res) => res.json())
@@ -51,4 +51,16 @@ const apiPerfil = async (userData) => {
     .catch((err) => console.log(err));
 };
 
-export { apiLogin, apiRegistro, apiList, apiPerfil };
+const apiAmigo = async (userData) => {
+  return await fetch("http://localhost:3001/buscarUsuario", {
+    method: "POST",
+    body: JSON.stringify(userData),
+    headers: {
+      "Content-Type": "application/json",
+      
+    },
+  })
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
+};
+export { apiLogin, apiRegistro, apiList, apiPerfil, apiAmigo };

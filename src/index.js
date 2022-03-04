@@ -18,7 +18,7 @@ import { store } from "./redux/store";
 import { Curso } from './components/Curso/Curso'
 import { Help } from './components/Help/Help';
 import { Amigos } from './components/Amigos/Amigos';
-import { PerfilAmigo } from './components/PerfilAmigo/perfilAmigo';
+import  Amigo  from './components/GetAmigo/GetAmigo';
 import  Perfil from './components/Perfil/Perfil';
 import { Home } from './pages/Home'
 import { Registro } from './pages/Registro'
@@ -36,7 +36,7 @@ ReactDOM.render(
 
           < Route path="/" element={<Apertura />} />  
           < Route path="/home" element={<Home quotesDB={global.quotesDB} />} />
-          < Route path="/perfilAmigo/:name/:apellido" element={<PerfilAmigo />} />
+          < Route path="/amigo" element={<Amigo />} />
           < Route path="/curso" element={<Curso />} />
           < Route path="/ayuda" element={<Help />} />
           < Route path="/portada/:id" element={<Perfil />} />
