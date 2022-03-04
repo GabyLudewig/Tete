@@ -1,5 +1,6 @@
 const userController = require("../controller/user");
 const midd = require('../midd/midd.usuarios')
+const auth = require("../midd/authenticate");
 
 module.exports = (app) => {
   app.post("/login", async (req, res) => {

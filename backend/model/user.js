@@ -54,7 +54,7 @@ module.exports.buscarUsuario = async (tecler) => {
       let word = await sql.query(`SELECT * FROM users WHERE nombres LIKE '%${words[i]}%' OR apellidos LIKE '%${words[i]}%'`)
       res.push(word)
     }
-    return {res,words,tecler }
+    return res
   }catch (error) {
     console.log("Error en modelo")
     throw new Error(error)

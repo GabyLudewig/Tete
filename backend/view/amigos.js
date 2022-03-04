@@ -1,16 +1,17 @@
 const amigosController = require("../controller/amigos");
+const auth = require("../midd/authenticate");
 
 
 
 module.exports = (app) => {
-    app.post("/agregarAmigos", async (req, res) => {
+    app.post("/agregarAmigos", auth.authenticate, async (req, res) => {
       let result = await amigosController.agregarAmigos(req.body);
       res.send(result);
     });
   }
 
   module.exports = (app) => {
-    app.post("/aceptarAmigos", async (req, res) => {
+    app.post("/aceptarAmigos", auth.authenticate, async (req, res) => {
       let result = await amigosController.aceptarAmigos(req.body);
       res.send(result);
     });
