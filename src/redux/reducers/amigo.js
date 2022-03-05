@@ -9,7 +9,7 @@ const initialState = {
 const amigoReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_AMIGO:
-      return { ...state, loading: true, tecler: action.payload };
+      return { ...state, loading: true, nombreAmigo: action.payload };
     case GET_AMIGO_SUCCESS:
       return { ...state, loading: false, amigo: action.payload, error: false  };
     case GET_AMIGO_ERROR:
