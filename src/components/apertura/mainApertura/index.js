@@ -10,15 +10,15 @@ function Main() {
                 <div className="facebook-servicio">
                     <div className="service">
                         <h3 className="n-service"><span className="number">1</span>Conexión de teclers</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi mollitia eos ducimus repudiandae maiores officia excepturi nulla quaerat sapiente beatae.</p>
+                       
                     </div>
                     <div className="service">
                         <h3 className="n-service"><span className="number">2</span>Perfil personalizado</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi mollitia eos ducimus repudiandae maiores officia excepturi nulla quaerat sapiente beatae.</p>
+                        
                     </div>
                     <div className="service">
                         <h3 className="n-service"><span className="number">3</span>Atractivo visual</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi mollitia eos ducimus repudiandae maiores officia excepturi nulla quaerat sapiente beatae.</p>
+                       
                     </div>
                 </div>
             </div>

@@ -129,6 +129,7 @@ function Amigos() {
                <div className="col-lg-7" >
                   <div className="card gray" >
                      <div className="card-body">
+                     <h3 className="gray">Tus amigos</h3>
                         <ul>
                            {
                               lista.map(item => (
