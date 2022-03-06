@@ -51,16 +51,5 @@ const apiPerfil = async (userData) => {
     .catch((err) => console.log(err));
 };
 
-const apiAmigo = async (userData) => {
-  return await fetch("http://localhost:3001/buscarUsuario", {
-    method: "POST",
-    body: JSON.stringify(userData),
-    headers: {
-      "Content-Type": "application/json",
-      
-    },
-  })
-    .then((res) => res.json())
-    .catch((err) => console.log(err));
-};
-export { apiLogin, apiRegistro, apiList, apiPerfil, apiAmigo };
+
+export { apiLogin, apiRegistro, apiList, apiPerfil };

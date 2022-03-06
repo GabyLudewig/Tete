@@ -12,6 +12,8 @@ const mapStateToProps = (state) => {
     nombreAmigo: state.amigoReducer.nombreAmigo,
   };
 };
+const user = JSON.parse(localStorage.getItem("USER"))
+
 
 function GetAmigo({ amigo, loading, error, nombreAmigo, getAmigo }) {
 
@@ -22,6 +24,17 @@ function GetAmigo({ amigo, loading, error, nombreAmigo, getAmigo }) {
   };
   // let  parsedAmigo = amigo[0][0]
   console.log(amigo[0])
+
+  const onSubmit = (event) => {
+    event.preventDefault()
+    console.log(event)
+    let newAmigo = {
+      id_1:user.id ,
+  
+    };
+    console.log(newAmigo)  
+ }
+ 
 
   return (
     <>
@@ -58,7 +71,29 @@ function GetAmigo({ amigo, loading, error, nombreAmigo, getAmigo }) {
                     <li key={item.id}>
                       <Link className="gray" to={`../Portada/${item.id}`}> Nombre: {item.nombres} {item.apellidos}  id: {item.id}
                       </Link>
+                      <div className="card-body">
+                                       <form onSubmit={onSubmit} >
+                                          <div id="output"></div>
+                                          <div className="mb-3">
+                                          </div>
+                                          {!loading && (
+                                             <div className="d-grid gap-2">
+                                                <button className="btn btn-secondary " value={item.id}>Agregar</button>
+                                             </div>
+                                          )}
+                                       </form>
 
+                                       {loading && (
+                                          <div className="d-grid gap-2">
+                                             <button className="btn btn-secondary" type="button" disabled>
+                                                <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                Publicando ...
+                                             </button>
+                                          </div>
+                                       )}
+
+
+                                    </div>
                     </li>
 
                   ))

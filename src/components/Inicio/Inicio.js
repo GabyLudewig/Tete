@@ -1,55 +1,55 @@
 import './Inicio.css';
 import { useState } from 'react';
-import {Nav}from "../Nav/Nav"
+import { Nav } from "../Nav/Nav"
 
 
 
 
 
-function Inicio({quotesDB}) {
+function Inicio({ quotesDB }) {
 
-const [quotes,setInicio] = useState(quotesDB)
+   const [quotes, setInicio] = useState(quotesDB)
 
-const [loading,setLoading] = useState(false)
+   const [loading, setLoading] = useState(false)
 
-const user = JSON.parse(localStorage.getItem("USER"))
-const foto= user.foto_perfil
-console.log (foto)
+   const user = JSON.parse(localStorage.getItem("USER"))
+   const foto = user.foto_perfil
+   console.log(foto)
 
 
-const onSubmit = (event) => {
-    event.preventDefault()
-    console.log(event)
-    let newQuote ={
-        id: quotes.length + 1,
-        //author:event.target[0].value,
-        quote:event.target[0].value
-    }
+   const onSubmit = (event) => {
+      event.preventDefault()
+      console.log(event)
+      let newQuote = {
+         id: quotes.length + 1,
+         //author:event.target[0].value,
+         quote: event.target[0].value
+      }
 
-    setLoading(true)
-    setTimeout(()=> {
-        setInicio([...quotes,newQuote])
-        event.target.reset()
-        setLoading(false)
-    },3000)
+      setLoading(true)
+      setTimeout(() => {
+         setInicio([...quotes, newQuote])
+         event.target.reset()
+         setLoading(false)
+      }, 3000)
 
-    
-}
 
-  return (
-   <>
-      <Nav />
-      <div className='container'>
-         <div className='row '>
+   }
+
+   return (
+      <>
+         <Nav />
+         <div className='container'>
+            <div className='row '>
                <div className='col-sm-3'>
                   <div className="card gray" >
                      <div className="card-body">
-                        
+
                         <ul className="list-group">
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div>
-                                 <img className= "logoTecler" src={require("../img/PabloPicasso.jpg")} />                           
+                                    <img className="logoTecler" src={require("../img/PabloPicasso.jpg")} />
                                  </div>
                                  <a className="gray" href='/portada'>{user.nombres} {user.apellidos}</a>
                               </div>
@@ -68,16 +68,16 @@ const onSubmit = (event) => {
                                     <i className="far fa-bookmark"></i>
                                  </div>
                                  <a className="gray">Guardado</a>
-                                 
-                                 
+
+
                               </div>
                            </li>
-                           
+
                         </ul>
                      </div>
                   </div>
-                        
-                  
+
+
                   <div className="card gray" >
                      <div className="card-body">
                         <h5 className="card-title">Accesos Directos</h5>
@@ -85,7 +85,7 @@ const onSubmit = (event) => {
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons white-back">
-                                    <i className="fas fa-gamepad"></i>                             
+                                    <i className="fas fa-gamepad"></i>
                                  </div>
                                  <a className="gray">Juegos</a>
                               </div>
@@ -98,92 +98,88 @@ const onSubmit = (event) => {
                                  <a className="gray">Videos</a>
                               </div>
                            </li>
-                           
+
                         </ul>
                      </div>
                   </div>
                </div>
 
-               
+
                <div className="col-lg-6" >
-               
-            
-               
-               <div className="d-flex justify-content-start flex-wrap">
+
+
+
+                  <div className="d-flex justify-content-start flex-wrap">
                      <div className="card perfil sub " >
+                        <div className="card-body">
+
                            <div className="card-body">
-                           
-                              <div className="card-body">
                               <div className="col-lg-12 offset-md-12">
-                              <div className="card">
-                           <div className="card-body">
-                           <form onSubmit={onSubmit} >
-                              {/*<div className="mb-3">
-                                 <label className="form-label">Author:</label>
-                                 <input type="text" className="form-control" placeholder="author name" required/>
-                              </div>*/}
-                              <div id="output"></div>
-                              <div className="mb-3">
-                                 {/*<label className="form-label">Quote:</label>*/}
-                                 <textarea className="form-control"  rows="4" placeholder= "Que estas pensando:" required></textarea>
-                              </div>
-                              { !loading && (
-                                 <div className="d-grid gap-2">
-                                       <button className="btn btn-secondary btn-block">publicar</button>
+                                 <div className="card">
+                                    <div className="card-body">
+                                       <form onSubmit={onSubmit} >
+                                          <div id="output"></div>
+                                          <div className="mb-3">
+                                             {/*<label className="form-label">Quote:</label>*/}
+                                             <textarea className="form-control" rows="4" placeholder="Que estas pensando:" required></textarea>
+                                          </div>
+                                          {!loading && (
+                                             <div className="d-grid gap-2">
+                                                <button className="btn btn-secondary btn-block">publicar</button>
+                                             </div>
+                                          )}
+                                       </form>
+
+                                       {loading && (
+                                          <div className="d-grid gap-2">
+                                             <button className="btn btn-secondary" type="button" disabled>
+                                                <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                Publicando ...
+                                             </button>
+                                          </div>
+                                       )}
+
+
                                     </div>
-                              )}
-                           </form>
-
-                           { loading && (
-                              <div className="d-grid gap-2">
-                              <button className="btn btn-secondary" type="button" disabled>
-                                 <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                 Publicando ...
-                              </button>
-                           </div>
-                           )}
-
-
-                           </div>
-                     </div>
-                  </div>    
+                                 </div>
                               </div>
                            </div>
+                        </div>
                      </div>
                   </div>
                   <div className="d-flex justify-content-start flex-wrap">
                      <div className="card perfil " >
+                        <div className="card-body">
+
                            <div className="card-body">
-                              
-                              <div className="card-body">
                               {
-                                 quotes.map(q =>(
-                                 <div key={q.id} className="col-lg-12">
-                                 <div className="card">
-                                       <div className="card-body">
-                                          {/*<h5 className="card-title">{q.author}</h5>*/}
-                                          <p className="card-text quote-text"><i>"{q.quote}"</i></p>
+                                 quotes.map(q => (
+                                    <div key={q.id} className="col-lg-12">
+                                       <div className="card">
+                                          <div className="card-body">
+                                             {/*<h5 className="card-title">{q.author}</h5>*/}
+                                             <p className="card-text quote-text"><i>"{q.quote}"</i></p>
+                                          </div>
                                        </div>
-                                       </div>
-                                 </div>
+                                    </div>
 
                                  ))
-                              }      
-                              </div>
-                              
+                              }
                            </div>
+
+                        </div>
                      </div>
                   </div>
-            </div>
-            <div className='col-sm-3'>
+               </div>
+               <div className='col-sm-3'>
                   <div className="card gray" >
                      <div className="card-body">
-                        
-                     <ul className="list-group">
+
+                        <ul className="list-group">
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons color_amigos">
-                                    <i className="fas fa-user-secret"></i>                             
+                                    <i className="fas fa-user-secret"></i>
                                  </div>
                                  <a className="gray">Gaby Ludewig</a>
                               </div>
@@ -207,11 +203,11 @@ const onSubmit = (event) => {
                         </ul>
                      </div>
                   </div>
-                        
-                  
+
+
                   <div className="card gray" >
                      <div className="card-body">
-                     <h5 className="card-title">sugerencias de amistad</h5>
+                        <h5 className="card-title">sugerencias de amistad</h5>
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
                               <div className="circle-icons color_amigos">
@@ -220,19 +216,19 @@ const onSubmit = (event) => {
                               <a className="gray">Lucaz Roa</a>
                            </div>
                            <button className="btn btn-secondary btn-block">Agregar</button>{"  "}
-                           <button className="btn btn-dark btn-block">Eliminar</button> 
+                           <button className="btn btn-dark btn-block">Eliminar</button>
                         </li>
-                        
-                                    
+
+
 
                      </div>
                   </div>
                </div>
 
+            </div>
          </div>
-         </div>
-   </>
-  );
+      </>
+   );
 }
 
-export {Inicio};
+export { Inicio };

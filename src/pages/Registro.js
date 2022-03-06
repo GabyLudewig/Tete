@@ -199,8 +199,8 @@ function Registro() {
                     </div>
                     <div className="form-floating mb-3">
                       <input
-                        type="edad"
-                        className="form-control" type="date" id="fecha_nac" 
+                        
+                        className="form-control" type="date"  
                         id="floatingRedad"
                         placeholder="edad"
                         defaultValue={user.fecha_nac}
@@ -223,7 +223,7 @@ function Registro() {
                     <br />
                     {!loadingR && (
                       <div className="d-grid gap-2">
-                        <button className="btn btn-primary" type="submit">
+                        <button className="btn btn-secondary" type="submit">
                           Registrate
                         </button>
                       </div>

@@ -15,23 +15,7 @@ function Nav() {
     
   };
 
-  const findFriend = async (event) => {
-    event.preventDefault()
-    console.log(event.target[0].value)
-    try {
-      const friendData = await fetch("http://localhost:3001/buscarUsuario", {
-        method: "POST",
-        body: JSON.stringify({ tecler: event.target[0].value}),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-      const parsedAmigo = await friendData.json()
-      console.log(parsedAmigo)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+
   
 
   return (
@@ -43,53 +27,52 @@ function Nav() {
        <span className="navbar-toggler-icon"></span>
      </button>
      <div className="collapse navbar-collapse " id="navbarSupportedContent">
-       <form className="d-flex nav-link" onSubmit={findFriend}>
-         <input className="form-control me-2" type="search"  aria-label="Search"/>
-         <NavLink className="nav-item"  to="/amigo">Buscar</ NavLink>
-       </form>
-       <ul className="navbar-nav position-absolute start-50">
+       
+       <ul className="navbar-nav position-absolute start-30">
          
          <li className="nav-item">
-           <NavLink className="nav-link "  to="/home"><i className="fas fa-house-user"></i></ NavLink>
+           <NavLink className="nav-link "  to="/home">Home <i className="fas fa-house-user"></i></ NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link" to="/curso"><i className="fas fa-graduation-cap"></i></  NavLink>
+           <NavLink className="nav-link" to="/curso">Cursos<i className="fas fa-graduation-cap"></i></  NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link" to="/ayuda" ><i className="fas fa-question-circle"></i>
+           <NavLink className="nav-link" to="/ayuda" >Ayuda <i className="fas fa-question-circle"></i>
            </  NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link "  to="/portada"><i class="fas fa-laptop-house"></i></ NavLink>
+           <NavLink className="nav-link "  to="/portada">Mi Perfil <i class="fas fa-laptop-house"></i></ NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link "  to="/amigos"><i class="fas fa-user-friends"></i></ NavLink>
+           <NavLink className="nav-link "  to="/amigos">Mis Amigos <i class="fas fa-user-friends"></i></ NavLink>
          </li>
          <li className="nav-item">
-           <NavLink className="nav-link "  to="/amistad"><i class="fa-solid fa-user-plus"></i></ NavLink>
+           <NavLink className="nav-link "  to="/amigo">Agrega un Amigo <i class="fa-solid fa-user-plus"></i></ NavLink>
          </li>
-         
-       </ul>
-     
-       <ul className="navbar-nav position-relative start-50">
-       <li className="nav-item dropdown">
+         <li className="nav-item dropdown">
            <a className="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            <i className="fas fa-bell"><span className="position-absolute top start-70 translate-middle badge border border-light rounded-circle bg-danger p-1"><span className="visually-hidden">unread messages</span></span></i>
            </a>
+           </li>
+           <li className="nav-item">
+                <span className="nav-link" onClick={logout}>
+                  {" "}
+                  Log Out <i className="fas fa-sign-out-alt"></i>{" "}
+                </span>
+              </li>
+       </ul>
+     
+       <ul className="navbar-nav position-relative start-50">
+       
            <ul className="dropdown-menu  p-4 text-muted" aria-labelledby="navbarDropdown">
              <li><a className="dropdown-item" href="#">Action</a></li>
              <li><a className="dropdown-item" href="#">Another action</a></li>
              
              <li><a className="dropdown-item" href="#">Something else here</a></li>
            </ul>
-         </li>
+         
          <ul className="navbar-nav">
-              <li className="nav-item">
-                <span className="nav-link" onClick={logout}>
-                  {" "}
-                  Log Out <i className="fas fa-sign-out-alt"></i>{" "}
-                </span>
-              </li>
+             
             
           </ul>
        </ul>

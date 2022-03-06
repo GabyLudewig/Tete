@@ -84,14 +84,14 @@ function Login() {
                 <br />
                 {!loading && (
                   <div className="d-grid gap-2">
-                    <button className="btn btn-primary" type="submit">
+                    <button className="btn btn-secondary" type="submit">
                       Sign In
                     </button>
                   </div>
                 )}
                 <br />
                 <div className="d-grid gap-2">
-                    <a className="navbar-brand" href="/registro">Registrate</a>
+                    <a className="btn btn-secondary" href="/registro">Registrate</a>
                   
                   </div>
               </form>
