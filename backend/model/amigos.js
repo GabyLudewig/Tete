@@ -42,10 +42,18 @@ module.exports.amigos = async (userData) => {
 
 module.exports.agregarAmigos = async (amigo) => {
 
+    let cons = await sql.query(
+        `SELECT * FROM amigos WHERE (id_user1= '${amigo.id_1}' OR id_user1= '${amigo.id_2}') AND (id_user2= '${amigo.id_1}' OR id_user2= '${amigo.id_2}')`
+    )
+
+    if (cons[0][0]){
+        return cons[0][0]
+    }else{
     let res = await sql.query(
         `INSERT INTO amigos (id_user1, id_user2, state) VALUES ('${amigo.id_1}', '${amigo.id_2}' , "2")`)
-    return { res }
+    return  cons 
   }
+}
 
   module.exports.aceptarAmigos = async (amigo) => {
 

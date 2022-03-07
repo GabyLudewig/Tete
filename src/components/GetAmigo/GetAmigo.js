@@ -27,15 +27,15 @@ function GetAmigo({ amigo, loading, error, nombreAmigo, getAmigo }) {
   // let  parsedAmigo = amigo[0][0]
   console.log(amigo[0])
 
-  const onClick = (id) => {
+  const onClick = async (id) => {
     console.log(id)
     let newAmigo = {
       id_1: user.id,
       id_2:id ,
   
     };
-    const data = apiNewAmigo(newAmigo)
-    console.log(newAmigo)  
+    const data = await apiNewAmigo(newAmigo)
+    console.log(data)  
  }
  
 
