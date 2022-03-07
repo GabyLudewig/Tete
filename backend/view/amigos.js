@@ -18,7 +18,7 @@ module.exports = (app) => {
   }
 
   module.exports = (app) => {
-    app.post("/listAmigos", auth.authenticate, async (req, res) => {
+    app.post("/listAmigos", async (req, res) => {
       let result = await amigosController.amigos(req.body);
       res.send(result);
     });
