@@ -13,14 +13,14 @@ module.exports = (app) => {
     res.send(result);
   });
   
-  app.post("/buscarUsuario", async (req, res) => {
+  app.post("/buscarUsuario",  auth.authenticate, async (req, res) => {
     const usuario = req.body
     const result = await userController.buscarUsuario(usuario)
     res.send( result )
   })
 
 
-app.post("/perfil", async (req, res) => {
+app.post("/perfil",  auth.authenticate, async (req, res) => {
   let busca = await userController.perfil(req.body)
   res.send( busca )
 })

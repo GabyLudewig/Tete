@@ -20,16 +20,16 @@ function GetAmigo({ amigo, loading, error, nombreAmigo, getAmigo }) {
   const printAmigo = (event) => {
     event.preventDefault();
     getAmigo(event.target.value);
+    
 
   };
   // let  parsedAmigo = amigo[0][0]
   console.log(amigo[0])
 
-  const onSubmit = (event) => {
-    event.preventDefault()
-    console.log(event)
+  const onClick = (id) => {
+    console.log(id)
     let newAmigo = {
-      id_1:user.id ,
+      id_1:id ,
   
     };
     console.log(newAmigo)  
@@ -72,13 +72,13 @@ function GetAmigo({ amigo, loading, error, nombreAmigo, getAmigo }) {
                       <Link className="gray" to={`../Portada/${item.id}`}> Nombre: {item.nombres} {item.apellidos}  id: {item.id}
                       </Link>
                       <div className="card-body">
-                                       <form onSubmit={onSubmit} >
+                                       <form >
                                           <div id="output"></div>
                                           <div className="mb-3">
                                           </div>
                                           {!loading && (
                                              <div className="d-grid gap-2">
-                                                <button className="btn btn-secondary " value={item.id}>Agregar</button>
+                                                <button className="btn btn-secondary " onClick={() => onClick(item.id)} type='button'>Agregar</button>
                                              </div>
                                           )}
                                        </form>
