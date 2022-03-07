@@ -43,7 +43,7 @@ module.exports.amigos = async (userData) => {
 module.exports.agregarAmigos = async (amigo) => {
 
     let res = await sql.query(
-        `INSERT INTO amigos (id_user1, id_user2) VALUES ('${amigo.id_user1}', '${amigo.id_user2}')`)
+        `INSERT INTO amigos (id_user1, id_user2, state) VALUES ('${amigo.id_1}', '${amigo.id_2}' , "2")`)
     return { res }
   }
 

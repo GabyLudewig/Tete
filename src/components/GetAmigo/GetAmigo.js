@@ -3,6 +3,7 @@ import { getAmigo } from "../../redux/actions/amigo";
 import { connect } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 import { Nav } from "../Nav/Nav"
+import { apiNewAmigo } from "../../api/api"
 
 const mapStateToProps = (state) => {
   return {
@@ -29,9 +30,11 @@ function GetAmigo({ amigo, loading, error, nombreAmigo, getAmigo }) {
   const onClick = (id) => {
     console.log(id)
     let newAmigo = {
-      id_1:id ,
+      id_1: user.id,
+      id_2:id ,
   
     };
+    const data = apiNewAmigo(newAmigo)
     console.log(newAmigo)  
  }
  

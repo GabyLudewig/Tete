@@ -51,5 +51,16 @@ const apiPerfil = async (userData) => {
     .catch((err) => console.log(err));
 };
 
+const apiNewAmigo = async (userData) => {
+  return await fetch("http://localhost:3001/agregarAmigos", {
+    method: "POST",
+    body: JSON.stringify(userData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
+};
 
-export { apiLogin, apiRegistro, apiList, apiPerfil };
+export { apiLogin, apiRegistro, apiList, apiPerfil, apiNewAmigo };

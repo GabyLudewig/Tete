@@ -28,7 +28,14 @@ INSERT INTO `amigos` (`id_amistad`, `id_user1`, `id_user2`, `state`) VALUES
 (10, 34, 35, 2),
 (11, 34, 36, 2),
 (13, 32, 36, 2),
-(14, 24, 36, 0);
+(14, 24, 36, 0),
+(15, 0, 0, 2),
+(16, 0, 0, 2),
+(17, 42, 24, 2),
+(18, 42, 31, 2),
+(19, 42, 32, 2),
+(20, 42, 35, 2),
+(21, 42, 40, 2);
 
 CREATE TABLE `ayuda` (
   `id_ayuda` int(10) NOT NULL,
@@ -104,17 +111,27 @@ CREATE TABLE `users` (
   `linkedIn` text NOT NULL,
   `fecha_nac` date NOT NULL,
   `email` varchar(150) NOT NULL,
-  `password` varchar(150) NOT NULL
+  `password` varchar(150) NOT NULL,
+  `estudios` varchar(100) NOT NULL,
+  `hobbies` varchar(150) NOT NULL,
+  `conocimientos_extra` varchar(150) NOT NULL,
+  `idiomas` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `users` (`id`, `nombres`, `apellidos`, `foto_perfil`, `ciudad`, `pais`, `linkedIn`, `fecha_nac`, `email`, `password`) VALUES
-(24, 'Gabriela', 'Ludewig', '../img/Gabriela_ludewig.jpg', '', '', '', '0000-00-00', 'gaby.ludewig@gmail.com', '432240ef98937be6a5385c8978727f39'),
-(31, 'Rogelio', 'De Los Santos', '', '', '', '', '0000-00-00', 'rsantosc@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(32, 'Vincent', 'Van Gogh', 'VincentVanGogh', 'Zundert', 'Paises Bajos', 'https://www.linkedin.com/in/vincent-van-gogh', '1853-03-30', 'vincent.vangogh@gmail.com', 'd3facf360f0b4f2d570c093e7e130210'),
-(33, 'Pablo', 'Picaso', 'PabloPicaso', 'Malaga', 'España', 'https://www.linkedin.com/in/pablo-picaso/', '0000-00-00', 'pablo.picaso@gmail.com', 'd34b885010b9fd09991f08b43e214f88'),
-(34, 'Claude', 'Monet', 'ClaudeMonet', 'Paris', 'Francia', 'https://www.linkedin.com/in/claudeMonet/', '1840-11-14', 'claude.monet@gmail.com', '1493bc6f5ef643d1be4823548c71b6ca'),
-(35, 'Leonardo', 'da Vinci', 'LeonardodaVinci', 'Florencia', 'Italia', 'https://www.linkedin.com/in/leonardo-da-vinci/', '1452-04-15', 'leonardo.davinci@gmail.com', 'd93ce360d1494f299341ff5edefa23ef'),
-(36, 'Salvador', 'Dali', 'SalvadorDali', 'Gerona', 'España', 'https://www.linkedin.com/in/salvador-dali/', '1904-05-11', 'salvador.dali@gmail.com', '5b96a42483ec336d90e443011e68ff53');
+INSERT INTO `users` (`id`, `nombres`, `apellidos`, `foto_perfil`, `ciudad`, `pais`, `linkedIn`, `fecha_nac`, `email`, `password`, `estudios`, `hobbies`, `conocimientos_extra`, `idiomas`) VALUES
+(24, 'Gabriela', 'Ludewig', '../img/Gabriela_ludewig.jpg', '', '', '', '0000-00-00', 'gaby.ludewig@gmail.com', '432240ef98937be6a5385c8978727f39', '', '', '', ''),
+(31, 'Rogelio', 'De Los Santos', '', '', '', '', '0000-00-00', 'rsantosc@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '', '', '', ''),
+(32, 'Vincent', 'Van Gogh', 'VincentVanGogh', 'Zundert', 'Paises Bajos', 'https://www.linkedin.com/in/vincent-van-gogh', '1853-03-30', 'vincent.vangogh@gmail.com', 'd3facf360f0b4f2d570c093e7e130210', '', '', '', ''),
+(33, 'Pablo', 'Picaso', 'PabloPicaso', 'Malaga', 'España', 'https://www.linkedin.com/in/pablo-picaso/', '0000-00-00', 'pablo.picaso@gmail.com', 'd34b885010b9fd09991f08b43e214f88', '', '', '', ''),
+(34, 'Claude', 'Monet', 'ClaudeMonet', 'Paris', 'Francia', 'https://www.linkedin.com/in/claudeMonet/', '1840-11-14', 'claude.monet@gmail.com', '1493bc6f5ef643d1be4823548c71b6ca', '', '', '', ''),
+(35, 'Leonardo', 'da Vinci', 'LeonardodaVinci', 'Florencia', 'Italia', 'https://www.linkedin.com/in/leonardo-da-vinci/', '1452-04-15', 'leonardo.davinci@gmail.com', 'd93ce360d1494f299341ff5edefa23ef', '', '', '', ''),
+(36, 'Salvador', 'Dali', 'SalvadorDali', 'Gerona', 'España', 'https://www.linkedin.com/in/salvador-dali/', '1904-05-11', 'salvador.dali@gmail.com', '5b96a42483ec336d90e443011e68ff53', '', '', '', ''),
+(37, 'Gabriela', 'Ludewig', '', '', '', '', '0000-00-00', 'gabriela.ludewig@gmail.com', 'c3acbf3e8be46cd0b6f068687fb7cd86', '', '', '', ''),
+(38, 'Gabriela', 'Ludewig', '', '', '', '', '0000-00-00', 'gabrielaa.ludewig@gmail.com', '432240ef98937be6a5385c8978727f39', '', '', '', ''),
+(39, 'gabriela', 'ludewig', '', 'Malaga', 'EspaÃ±a', 'linkedin', '2022-02-27', 'gaby.ludewigg@gmail.com', 'fff9a8ed81a2bcc6b5b3a5f9a0c9002e', 'java', 'leer', 'react', 'ingles'),
+(40, 'Vannia', 'De Los Santos', '', 'Cuautitlan Izcalli', 'Mexico', 'no tiene', '2001-07-17', 'vannia.delossantos@gmail.com', '7c1e03b69524901d3f79c256a1e10a21', 'kinder', 'molestar', 'llorar', 'chino mandarin coreano'),
+(41, 'Leonardo', 'De Los Santos', '', 'Malaga', 'EspaÃ±a', 'no tiene', '2015-10-23', 'leo.delossantos@gmail.com', '2b9b2d3438d41eb1a0291872d335b5c3', 'primaria', 'jugar', 'leer', 'ingles'),
+(42, 'Lia', 'De ', '', 'Malaga', 'EspaÃ±a', 'no tiene', '2017-12-28', 'lia.delossantos@gmail.com', '2f5ebff70f12a526cc5901ab0c6637e2', 'kinder', 'molestar', 'llorar', 'chino mandarin coreano');
 
 
 ALTER TABLE `amigos`
@@ -147,7 +164,7 @@ ALTER TABLE `users`
 
 
 ALTER TABLE `amigos`
-  MODIFY `id_amistad` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_amistad` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 ALTER TABLE `ayuda`
   MODIFY `id_ayuda` int(10) NOT NULL AUTO_INCREMENT;
@@ -171,7 +188,7 @@ ALTER TABLE `recomendacion`
   MODIFY `id_recomendacion` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
