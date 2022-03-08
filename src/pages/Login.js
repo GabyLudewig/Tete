@@ -50,8 +50,8 @@ function Login() {
       <div className="row">
 
       <div className="col-lg-6 ">
-          <div className="card" >
-            <div className="card-body">
+          <div className="card mb-3" >
+            <div className="card-body mb-3">
               <h5 className="card-title">Hola Tecler:</h5>
               {error.error && (
                 <div className="alert alert-danger text-center" role="alert">

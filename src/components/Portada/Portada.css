@@ -3,62 +3,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 body {
-  font-family: "fedoka",cursive;
-  background-color: #F4F5F7; 
+  font-family: "fedoka", cursive;
+  background-color: #f4f5f7;
   background-image: url(../img/fondologin.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-
 }
 /*narvar*/
-.list-group-item{
+.list-group-item {
   border: none;
-  background-color: rgba(255,255,255,0.13);
+  background-color: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(0px);
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
 }
 
-
 .green {
-  color: #10D875;
+  color: #10d875;
 }
 
 .gray {
-  color:white;
+  color: white;
   font-weight: lighter;
   text-decoration: none;
 }
 /*tarjetas*/
 .card {
-  
   margin-top: 10px;
   margin-left: 10px;
   text-align: center;
-  background-color: rgba(255,255,255,0.13);
-  
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  background-color: rgba(255, 255, 255, 0.13);
+
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
 }
 
 .card-title {
-    font-size: 12px;
-    text-align: left;
-  }
-  
-  .card-img-top {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    margin: 0px auto;
-    margin-top: 20px; 
-    background-color: rgba(255,255,255,0.13);
-    backdrop-filter: blur(10px);
-  }
+  font-size: 12px;
+  text-align: left;
+}
 
-  
-/*(hitorias y perfil)*/  
+.card-img-top {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 0px auto;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+}
+
+/*(hitorias y perfil)*/
 
 .contenedor_historia {
   height: 500px;
@@ -71,28 +67,25 @@ body {
   gap: 10px;
 }
 .perfil {
-    height: auto;
-    width: 97%;
-    display: flex;
-    /*flex-flow:<flex-direction><flex-wrap>;*/
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: center;
-    gap: 10px;
-  }
+  height: auto;
+  width: 97%;
+  display: flex;
+  /*flex-flow:<flex-direction><flex-wrap>;*/
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
 
-  .sub{
-      height: 500px;
-  }
+.sub {
+  height: 500px;
+}
 
 .historia {
   width: 150px;
   height: 90%;
 }
-
-
-
 
 /*icononos y lista*/
 .circle-icons {
@@ -105,8 +98,6 @@ body {
   margin-right: 10px;
 }
 
-
-
 .color_usuario {
   background: #3789b9;
 }
@@ -115,37 +106,28 @@ body {
   background: #a827e4;
 }
 
-
-
 .white-back {
-  background:white;
-  color: #ACB5BE;
+  background: white;
+  color: #acb5be;
 }
 
 .list-group-item {
   border: none;
 }
 
-.logoTecler{
-
+.logoTecler {
   border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	border: 4px solid rgba(248, 210, 246, 0.1);
-	box-shadow: 0 0 4px rgba(8,7,16,0.6); 
-
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(248, 210, 246, 0.1);
 }
-
-
-
 
 /*css ale*/
 
-
-.card{
-    margin-top: 10px;
-    margin-right: 10px;
+.card {
+  margin-top: 10px;
+  margin-right: 10px;
 }
-.quote-text{
-    text-align: left;
+.quote-text {
+  text-align: left;
 }

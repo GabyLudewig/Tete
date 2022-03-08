@@ -176,28 +176,29 @@ function Inicio({ quotesDB }) {
                      <div className="card-body">
 
                         <ul className="list-group">
+                        <h5 className="card-title">MUSIC</h5>
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons color_amigos">
-                                    <i className="fas fa-user-secret"></i>
+                                 <i className="fa-solid fa-play"></i>
                                  </div>
-                                 <a className="gray">Gaby Ludewig</a>
+                                 <a className="gray" href='https://www.youtube.com/watch?v=VL4uXxlg8bM' target="_blank" rel="noreferrer">Juicy - Doja cat</a>
                               </div>
                            </li>
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons color_amigos">
-                                    <i className="fas fa-user-ninja"></i>
+                                 <i className="fa-solid fa-play"></i>
                                  </div>
-                                 <a className="gray">Tonny</a>
+                                 <a className="gray" href='https://www.youtube.com/watch?v=yxW5yuzVi8w' target="_blank" rel="noreferrer">Woman - Doja cat</a>
                               </div>
                            </li>
                            <li className="list-group-item">
                               <div className="d-flex justify-content-start flex-wrap align-items-center">
                                  <div className="circle-icons color_amigos">
-                                    <i className="fas fa-user-astronaut"></i>
+                                    <i className="fa-solid fa-play"></i>
                                  </div>
-                                 <a className="gray">Isac Vega</a>
+                                 <a className="gray" href='https://www.youtube.com/watch?v=pok8H_KF1FA' target="_blank" rel="noreferrer">Say So - Doja Cat</a>
                               </div>
                            </li>
                         </ul>
@@ -207,16 +208,14 @@ function Inicio({ quotesDB }) {
 
                   <div className="card gray" >
                      <div className="card-body">
-                        <h5 className="card-title">sugerencias de amistad</h5>
+                        <h5 className="card-title">Sugerencia de vida</h5>
                         <li className="list-group-item">
                            <div className="d-flex justify-content-start flex-wrap align-items-center">
-                              <div className="circle-icons color_amigos">
-                                 <i className="fas fa-user-astronaut"></i>
-                              </div>
-                              <a className="gray">Lucaz Roa</a>
+           
+                                    <img className="logoLolcito" src={require("../img/lolcito.png")} />
+                              
+                              <a className="gray" href='https://www.leagueoflegends.com/es-mx/' target="_blank" rel="noreferrer">League of legends</a>
                            </div>
-                           <button className="btn btn-secondary btn-block">Agregar</button>{"  "}
-                           <button className="btn btn-dark btn-block">Eliminar</button>
                         </li>
 
 
